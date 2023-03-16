@@ -2,13 +2,13 @@ import re
 
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver import DesiredCapabilities
-from selenium.common.exceptions import WebDriverException
+# from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.remote.webdriver import By
-from selenium.webdriver.remote.webelement import WebElement
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.action_chains import ActionChains
+# from selenium.webdriver.remote.webelement import WebElement
+# from selenium.webdriver.support.wait import WebDriverWait
+# from selenium.webdriver.common.action_chains import ActionChains
 
-import selenium.webdriver.support.expected_conditions as EC
+# import selenium.webdriver.support.expected_conditions as EC
 import undetected_chromedriver as uc
 
 from bs4 import BeautifulSoup as bs4
@@ -80,19 +80,16 @@ class PaymentProviderFetcher():
             if not url.startswith("http"):
                 return False
 
-        if url.find("/blog") != -1 or url.find("/kontakt") != -1 or url.find("/contact") != -1 or url.find("/about") != -1 or url.find("/om") != -1 or url.find("/faq") != -1 or url.find("/login") != -1 or url.find("/konto") != -1 or url.find("/account") != -1 or url.find("/create") != -1 or url.find("/sign") != -1 or url.find("/cart") != -1 or url.find("/kurv") != -1 or url.find("/checkout") != -1 or url.find("/tjekud") != -1 or url.find("/club") != -1 or url.find("/klub") != -1 or url.find("privacy") != -1 or url.find("terms") != -1:
+        if url.find("/blog") != -1 or url.find("/kontakt") != -1 or url.find("/contact") != -1 or url.find("/about") != -1 or url.find("/om") != -1 or url.find("/faq") != -1 or url.find("/login") != -1 or url.find("/konto") != -1 or url.find("/account") != -1 or url.find("/create") != -1 or url.find("/sign") != -1 or url.find("/cart") != -1 or url.find("/kurv") != -1 or url.find("/checkout") != -1 or url.find("/tjekud") != -1 or url.find("/club") != -1 or url.find("/klub") != -1 or url.find("privacy") != -1 or url.find("terms") != -1 or url.find("policy") != -1:
             return False
 
         return True
 
     def get_element_by_xpath(self, xpath: str):
-        elem = self.driver.execute_script(f"return document.evaluate(\"{xpath}\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;")
-        sleep(0.5)
-        return elem
+        return self.driver.execute_script(f"return document.evaluate(\"{xpath}\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;")
 
     def click_using_xpath(self, xpath: str):
         self.driver.execute_script(f"document.evaluate(\"{xpath}\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();")
-        sleep(1.2)
 
     def get_element_by_css(self, css: str):
         return self.driver.execute_script(f"return document.querySelectorAll(\"{css}\")[0]")
@@ -100,6 +97,44 @@ class PaymentProviderFetcher():
     def execute_click_script(self, elem):
         self.driver.execute_script("arguments[0].click()", elem)
 
+    def get_cart_btn_2(self):
+        add_to_cart, x_path = None, None
+        
+        add_to_cart = self.get_element_by_xpath(".//*[@value='Tilføj til kurv']")
+        x_path = ".//*[@value='Tilføj til kurv']"
+            
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                ".//*[@value='Læg i kurv']")
+            x_path = ".//*[@value='Læg i kurv']"
+            
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                ".//*[@value='Add to cart']")
+            x_path = ".//*[@value='Add to cart']"
+            
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                ".//*[@value='Add to basket']")
+            x_path = ".//*[@value='Add to basket']"
+            
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                ".//*[@value='Tilføj til indkøbskurv']")
+            x_path = ".//*[@value='Tilføj til indkøbskurv']"
+            
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                ".//*[@value='Føj til kurv']")
+            x_path = ".//*[@value='Føj til kurv']"
+            
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                ".//*[@value='Køb']")
+            x_path = ".//*[@value='Køb']"
+            
+        return add_to_cart, x_path
+    
     def get_cart_btn(self):
         add_to_cart, x_path = None, None
 
@@ -112,10 +147,10 @@ class PaymentProviderFetcher():
             x_path = "//*[translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV')='TILFØJ TIL KURV']"
 
         # add_to_cart = self.get_element_by_xpath("//*[text()='Tilføj til kurv']")
-
-        add_to_cart = self.get_element_by_xpath(
-            "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*")
-        x_path = "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*"
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*")
+            x_path = "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
@@ -124,10 +159,10 @@ class PaymentProviderFetcher():
 
         # if not add_to_cart:
         #     add_to_cart = self.get_element_by_xpath("//*[text()='Læg i kurv']")
-
-        add_to_cart = self.get_element_by_xpath(
-            "//*[translate(normalize-space(), 'add to cart', 'ADD TO CART')='ADD TO CART']/*")
-        x_path = "//*[translate(normalize-space(), 'add to cart', 'ADD TO CART')='ADD TO CART']/*"
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                "//*[translate(normalize-space(), 'add to cart', 'ADD TO CART')='ADD TO CART']/*")
+            x_path = "//*[translate(normalize-space(), 'add to cart', 'ADD TO CART')='ADD TO CART']/*"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
@@ -136,10 +171,10 @@ class PaymentProviderFetcher():
 
         # if not add_to_cart:
         #     add_to_cart = self.get_element_by_xpath("//*[text()='Add to cart']")
-
-        add_to_cart = self.get_element_by_xpath(
-            "//*[translate(normalize-space(), 'add to basket', 'ADD TO BASKET')='ADD TO BASKET']/*")
-        x_path = "//*[translate(normalize-space(), 'add to basket', 'ADD TO BASKET')='ADD TO BASKET']/*"
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                "//*[translate(normalize-space(), 'add to basket', 'ADD TO BASKET')='ADD TO BASKET']/*")
+            x_path = "//*[translate(normalize-space(), 'add to basket', 'ADD TO BASKET')='ADD TO BASKET']/*"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
@@ -148,10 +183,10 @@ class PaymentProviderFetcher():
 
         # if not add_to_cart:
         #     add_to_cart = self.get_element_by_xpath("//*[text()='Add to basket']")
-
-        add_to_cart = self.get_element_by_xpath(
-            "//*[translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV')='TILFØJ TIL INDKØBSKURV']/*")
-        x_path = "//*[translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV')='TILFØJ TIL INDKØBSKURV']/*"
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                "//*[translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV')='TILFØJ TIL INDKØBSKURV']/*")
+            x_path = "//*[translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV')='TILFØJ TIL INDKØBSKURV']/*"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
@@ -160,10 +195,10 @@ class PaymentProviderFetcher():
 
         # if not add_to_cart:
         #     add_to_cart = self.get_element_by_xpath("//*[text()='Tilføj til indkøbskurv']")
-
-        add_to_cart = self.get_element_by_xpath(
-            "//*[translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV')='FØJ TIL KURV']/*")
-        x_path = "//*[translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV')='FØJ TIL KURV']/*"
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                "//*[translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV')='FØJ TIL KURV']/*")
+            x_path = "//*[translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV')='FØJ TIL KURV']/*"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
@@ -172,15 +207,15 @@ class PaymentProviderFetcher():
         
         # if not add_to_cart:
         #     add_to_cart = self.get_element_by_xpath("//*[text()='Føj til kurv']")
-
-        add_to_cart = self.get_element_by_xpath(
-            "//*[translate(normalize-space(), 'køb', 'KØB')='KØB']/*")
-        x_path = "//*[translate(normalize-space(), 'KØB', 'KØB')='KØB']/*"
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                "//*[translate(normalize-space(), 'køb', 'KØB')='KØB']/*")
+            x_path = "//*[translate(normalize-space(), 'køb', 'KØB')='KØB']/*"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[translate(normalize-space(), 'køb', 'KØB')='KØB']")
-            x_path = "//*[translate(normalize-space(), 'KØB', 'KØB')='KØB']"
+            x_path = "//*[translate(normalize-space(), 'køb', 'KØB')='KØB']"
         
         # if not add_to_cart:
         #     add_to_cart = self.get_element_by_xpath("//*[text()='Køb']")
@@ -226,13 +261,13 @@ class PaymentProviderFetcher():
             is_valid_page, xpath = self.get_cart_btn()
 
             if is_valid_page:
-                try:
-                    btn_text = is_valid_page.text.lower()
-
-                    if len(btn_text) > 0:
-                        return
-                except:
-                    ...
+                return
+            else:
+                is_valid_page, xpath = self.get_cart_btn_2()
+                
+                if is_valid_page:
+                    return
+            
             sleep(randrange(2, 4))
 
     def handle_sitemap(self, website: str):
@@ -251,7 +286,15 @@ class PaymentProviderFetcher():
                         self.handle_sitemap(website)
                         return
                     else:
-                        return
+                        is_valid_page, xpath = self.get_cart_btn()
+
+                        if is_valid_page:
+                            return
+                        else:
+                            is_valid_page, xpath = self.get_cart_btn_2()
+
+                            if is_valid_page:
+                                return
 
                 elif url.lower().find("sitemap") != -1:
                     self.driver.get(url)
@@ -319,10 +362,34 @@ class PaymentProviderFetcher():
         print(add_to_cart, xpath)
 
         if add_to_cart:
-            self.click_using_xpath(xpath=xpath)
+            try:
+                self.click_using_xpath(xpath=xpath)
+            except:
+                if xpath.endswith("/*"):
+                    xpath = "/*".join(xpath.split("/*")[:2])
+                try:
+                    self.click_using_xpath(xpath=xpath)
+                except:
+                    return False
             # self.execute_click_script(add_to_cart)
             sleep(2.3)
             return True
+        else:
+            add_to_cart, xpath = self.get_cart_btn_2()
+
+            if add_to_cart:
+                try:
+                    self.click_using_xpath(xpath=xpath)
+                except:
+                    if xpath.endswith("/*"):
+                        xpath = "/*".join(xpath.split("/*")[:2])
+                    try:
+                        self.click_using_xpath(xpath=xpath)
+                    except:
+                        return False
+                # self.execute_click_script(add_to_cart)
+                sleep(2.3)
+                return True
 
         return False
 
@@ -551,7 +618,25 @@ if __name__ == "__main__":
     #      "https://www.natruba.dk/cart"]
     # l.sort(key=len, reverse=True)
     # print(l)
+    
+    # x_path = "//*[translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV')='TILFØJ TIL KURV']/*"
+    
+    # if x_path.endswith("/*"):
+    #     x_path = "/*".join(x_path.split("/*")[:2])
+    
+    # print(x_path)
 
+# skatepro.dk
+# liberte.dk
+# vinylpladen.dk
+
+# givingdeer.dk
+# fitnesscoaching.dk
+# danishendurance.com
+# Bygmax.dk
+# brand-art.dk
+# annavonlipa.com
+# Klub-modul.dk
 # enamelcopenhagen.dk
 # nordbrands.dk
 # nyesokker.dk
@@ -559,14 +644,3 @@ if __name__ == "__main__":
 # merkdesignstudio.dk
 # natruba.dk
 # zizzi.dk
-# skatepro.dk
-# liberte.dk
-# vinylpladen.dk
-
-# givingdeer.dk - ok
-# fitnesscoaching.dk - ok
-# danishendurance.com - ok
-# Bygmax.dk - ok
-# brand-art.dk - ok
-# annavonlipa.com - ok
-# Klub-modul.dk - ok
