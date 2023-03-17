@@ -1,0 +1,1499 @@
+<html lang="da-dk" dir="ltr" style="background-color: rgb(255, 255, 255);">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, user-scalable=0">
+    <meta name="referrer" content="origin">
+    <link rel="dns-prefetch preconnect" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/">
+    <title data-react-html="true">oplysninger – nord brands – betaling</title>
+    <style>
+        html {
+            font-size: 62.5%;
+
+        }
+
+        body {
+            background-color: #ffffff;
+
+        }
+
+        .loading {
+            overflow-y: scroll;
+
+        }
+
+        .loading #app {
+            opacity: 0;
+
+        }
+
+        #app {
+            opacity: 1;
+            transition: opacity 100ms ease-in-out;
+
+        }
+
+        .loading .spinnerwrapper {
+            opacity: 1;
+
+        }
+
+        .spinnerwrapper {
+            font-size: 1.4rem;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: opacity 100ms ease-in-out;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 4.571428571428571em;
+            height: 4.571428571428571em;
+            color: #111111;
+            pointer-events: none;
+
+        }
+
+        .spinner {
+            display: block;
+            max-height: 100%;
+            max-width: 100%;
+            fill: currentcolor;
+            opacity: 0;
+            -webkit-animation: fade-in 200ms ease-in-out 200ms forwards, rotate 500ms linear 5;
+            animation: fade-in 200ms ease-in-out 200ms forwards, rotate 500ms linear 5;
+
+        }
+
+        .loading .spinner {
+            -webkit-animation: fade-in 200ms ease-in-out 300ms forwards, rotate 500ms linear infinite;
+            animation: fade-in 200ms ease-in-out 300ms forwards, rotate 500ms linear infinite;
+
+        }
+
+        @-webkit-keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0);
+
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+
+            }
+
+
+        }
+
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0);
+
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+
+            }
+
+
+        }
+
+        @-webkit-keyframes fade-in {
+            0% {
+                opacity: 0;
+
+            }
+
+            100% {
+                opacity: 1;
+
+            }
+
+
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+
+            }
+
+            100% {
+                opacity: 1;
+
+            }
+
+
+        }
+    </style>
+    <script type="text/javascript" async="" src="https://cdn.shopify.com/s/trekkie.storefront.min.js"></script>
+    <script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/runtime.latest.da.38bea9540bd0bff0cb3f.js"
+        crossorigin="anonymous" defer="defer"></script>
+    <script
+        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages-packages_checkout-react-html_src_hooks_title_ts.latest.da.3457953d3abd1b694aa5.js"
+        crossorigin="anonymous" defer="defer"></script>
+    <script
+        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors-node_modules_shopify_verdict_build_esm_runtimes_browser_index_mts_js.latest.da.aa3f47b1fb7e892fe777.js"
+        crossorigin="anonymous" defer="defer"></script>
+    <script
+        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app_components_addressform_addressform_tsx-app_components_step_step_tsx-app_utilities_receipt-4dad45.latest.da.3c0346f22a0df5198d19.js"
+        crossorigin="anonymous" defer="defer"></script>
+    <script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/information.latest.da.6b0b6502f9caca7374b4.js"
+        crossorigin="anonymous" defer="defer"></script>
+    <script
+        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui-packages_checkout-web-ui_src_styles_global_css_ts-packages_checkout-web-ui_sr-591a0f.latest.da.1bf6b7ae7255b277febd.js"
+        crossorigin="anonymous" defer="defer"></script>
+    <script
+        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors-node_modules_bugsnag_js_browser_notifier_js-node_modules_shopify_checkout-telemetry-a-38c8d5.latest.da.fe6d829d0bb9015ddc02.js"
+        crossorigin="anonymous" defer="defer"></script>
+    <script
+        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages-packages_card-fields-react_src_hook_ts-packages_checkout-graphql_src_in-92a386.latest.da.88220a190544cf9e8c5d.js"
+        crossorigin="anonymous" defer="defer"></script>
+    <script src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.da.7d0777743d73809048b4.js"
+        crossorigin="anonymous" defer="defer"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/googlepaybutton.latest.da.25d5aed2496d78022560.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/autocompletefield.latest.da.ecdcd594bf35b30c6d8a.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/shipping.latest.da.6f4def89b9c252c1beb9.css">
+    <style type="text/css">
+        .gpay-button {
+            background-origin: content-box;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 0px;
+            border-radius: 4px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            cursor: pointer;
+            height: 40px;
+            min-height: 40px;
+            padding: 12px 24px 10px;
+            width: 240px;
+
+        }
+
+        .gpay-button.black {
+            background-color: #000;
+            box-shadow: none;
+
+        }
+
+        .gpay-button.white {
+            background-color: #fff;
+
+        }
+
+        .gpay-button.short,
+        .gpay-button.plain {
+            min-width: 90px;
+            width: 160px;
+
+        }
+
+        .gpay-button.black.short,
+        .gpay-button.black.plain {
+            background-image: url(https://www.gstatic.com/instantbuy/svg/dark_gpay.svg);
+
+        }
+
+        .gpay-button.black.short.new_style,
+        .gpay-button.black.plain.new_style {
+            background-image: url(https://www.gstatic.com/instantbuy/svg/refreshedgraphicaldesign/dark_gpay.svg);
+            min-width: 160px;
+            background-size: contain;
+
+        }
+
+        .gpay-button.white.short,
+        .gpay-button.white.plain {
+            background-image: url(https://www.gstatic.com/instantbuy/svg/light_gpay.svg);
+
+        }
+
+        .gpay-button.black.active {
+            background-color: #5f6368;
+
+        }
+
+        .gpay-button.black.hover {
+            background-color: #3c4043;
+
+        }
+
+        .gpay-button.white.active {
+            background-color: #fff;
+
+        }
+
+        .gpay-button.white.focus {
+            box-shadow: #e8e8e8 0 1px 1px 0, #e8e8e8 0 1px 3px;
+
+        }
+
+        .gpay-button.white.hover {
+            background-color: #f8f8f8;
+
+        }
+
+        .gpay-button-fill,
+        .gpay-button-fill>.gpay-button.white,
+        .gpay-button-fill>.gpay-button.black {
+            width: 100%;
+            height: inherit;
+
+        }
+
+        .gpay-button-fill-new-style,
+        .gpay-button-fill-new-style>.gpay-button.black {
+            width: 100%;
+            height: inherit;
+            background-size: contain;
+
+        }
+
+        .gpay-button-fill>.gpay-button.white,
+        .gpay-button-fill>.gpay-button.black {
+            padding: 12px 15% 10px;
+
+        }
+
+        .gpay-button.donate,
+        .gpay-button.book,
+        .gpay-button.checkout,
+        .gpay-button.subscribe,
+        .gpay-button.pay,
+        .gpay-button.order {
+            padding: 9px 24px;
+
+        }
+
+        .gpay-button-fill>.gpay-button.donate,
+        .gpay-button-fill>.gpay-button.book,
+        .gpay-button-fill>.gpay-button.checkout,
+        .gpay-button-fill>.gpay-button.order,
+        .gpay-button-fill>.gpay-button.pay,
+        .gpay-button-fill>.gpay-button.subscribe {
+            padding: 9px 15%;
+
+        }
+
+        .gpay-button-fill-new-style>.gpay-button.donate,
+        .gpay-button-fill-new-style>.gpay-button.book,
+        .gpay-button-fill-new-style>.gpay-button.checkout,
+        .gpay-button-fill-new-style>.gpay-button.order,
+        .gpay-button-fill-new-style>.gpay-button.pay,
+        .gpay-button-fill-new-style>.gpay-button.subscribe {
+            padding: 12px 15%;
+            background-size: contain;
+
+        }
+    </style>
+    <style type="text/css">
+        .gpay-button.new_style {
+            background-size: auto;
+            border-radius: 100vh;
+            padding: 11px 24px;
+            box-sizing: border-box;
+            border: 1px solid #747775;
+            min-height: 48px;
+            font-size: 20px;
+            width: auto;
+
+        }
+    </style>
+</head>
+
+<body class="" style="background-color: rgb(255, 255, 255);">
+    <div id="app">
+        <div class="_1coqx425d"
+            style="--x-color-canvas-background:rgb(255,255,255); --x-color-canvas-background-subdued:rgb(246,246,246); --x-color-canvas-background-disabled:rgb(248,248,248); --x-color-canvas-background-hovered:rgb(241,241,241); --x-color-canvas-text:rgb(83,83,83); --x-color-canvas-text-subdued:rgb(115,115,115); --x-color-canvas-text-emphasized:rgb(51,51,51); --x-color-canvas-border:rgb(217,217,217); --x-color-canvas-border-subdued:rgb(235,235,235); --x-color-canvas-border-emphasized:rgb(148,148,148); --x-color-canvas-accent:rgb(17,17,17); --x-color-color1-background:rgb(255,255,255); --x-color-color1-background-disabled:rgb(248,248,248); --x-color-color1-background-subdued:rgb(246,246,246); --x-color-color1-background-hovered:rgb(241,241,241); --x-color-color1-text:rgb(83,83,83); --x-color-color1-text-subdued:rgb(115,115,115); --x-color-color1-text-emphasized:rgb(51,51,51); --x-color-color1-border:rgb(217,217,217); --x-color-color1-border-subdued:rgb(235,235,235); --x-color-color1-border-emphasized:rgb(148,148,148); --x-color-color1-accent:rgb(17,17,17); --x-color-color2-background:rgb(250,250,250); --x-color-color2-background-subdued:rgb(241,241,241); --x-color-color2-background-disabled:rgb(243,243,243); --x-color-color2-background-hovered:rgb(236,236,236); --x-color-color2-text:rgb(79,79,79); --x-color-color2-text-subdued:rgb(110,110,110); --x-color-color2-text-emphasized:rgb(47,47,47); --x-color-color2-border:rgb(212,212,212); --x-color-color2-border-subdued:rgb(230,230,230); --x-color-color2-border-emphasized:rgb(143,143,143); --x-color-color2-accent:rgb(17,17,17); --x-color-primary:rgb(17,17,17); --x-color-primary-hovered:rgb(0,0,0); --x-color-primary-text:rgb(255,255,255); --x-color-primary-text-hovered:rgb(255,255,255); --x-color-primary-border:rgb(0,0,0); --x-color-primary-disabled:rgb(17,17,17); --x-color-secondary-action:rgb(17,17,17); --x-color-secondary-action-hovered:rgb(0,0,0); --x-color-secondary-action-text:rgb(255,255,255); --x-color-secondary-action-text-hovered:rgb(255,255,255); --x-color-secondary-action-border:rgb(0,0,0); --x-color-secondary-action-disabled:rgb(17,17,17); --x-color-interactive-text:rgb(17,17,17); --x-color-interactive-on-text:rgb(255,255,255); --x-color-interactive-text-hovered:rgb(38,38,38); --x-color-interactive-foreground-as-subdued-background:rgb(246,246,246); --x-color-critical-accent:rgb(255,109,109); --x-color-critical-accent-hovered:rgb(255,79,79); --_1coqx42m:rgb(255,255,255); --_1coqx42n:rgb(246,246,246); --_1coqx42p:rgb(248,248,248); --_1coqx42o:rgb(241,241,241); --_1coqx42q:rgb(83,83,83); --_1coqx42r:rgb(115,115,115); --_1coqx42s:rgb(51,51,51); --_1coqx42t:rgb(217,217,217); --_1coqx42u:rgb(235,235,235); --_1coqx42v:rgb(148,148,148); --_1coqx42w:rgb(17,17,17); --_1coqx42x:rgb(255,255,255); --_1coqx4210:rgb(248,248,248); --_1coqx42y:rgb(246,246,246); --_1coqx42z:rgb(241,241,241); --_1coqx4211:rgb(83,83,83); --_1coqx4212:rgb(115,115,115); --_1coqx4213:rgb(51,51,51); --_1coqx4214:rgb(217,217,217); --_1coqx4215:rgb(235,235,235); --_1coqx4216:rgb(148,148,148); --_1coqx4217:rgb(17,17,17); --_1coqx4218:rgb(250,250,250); --_1coqx4219:rgb(241,241,241); --_1coqx421a:rgb(243,243,243); --_1coqx421b:rgb(236,236,236); --_1coqx421c:rgb(79,79,79); --_1coqx421d:rgb(110,110,110); --_1coqx421e:rgb(47,47,47); --_1coqx421f:rgb(212,212,212); --_1coqx421g:rgb(230,230,230); --_1coqx421h:rgb(143,143,143); --_1coqx421i:rgb(17,17,17);">
+            <div class="g9gqqf1 _1fragemb1 _1fragem1i">
+                <div class="_1fragem14 _1fragema3">
+                    <div role="region" aria-labelledby="step-section-primary-header">
+                        <div class="yil88 tpqrn ny1c6"><a href="#checkout-main" class="xsnuw">skip til indhold</a>
+                            <div class="_1fragem14 _1fragema5 _1fragema3">
+                                <h1 class="n8k95w1 _1fragema3 n8k95w2">oplysninger</h1>
+                            </div>
+                            <div class="i3djt teft5">
+                                <div class="rtcqb">
+                                    <header role="banner" class="nbwgl">
+                                        <div>
+                                            <div
+                                                class="_1fragem14 _1fragem8g _1fragem8w _1fragem80 _1fragem9c _1fragema3">
+                                                <div class="t50pa layout0 z5ick rhutj">
+                                                    <style>
+                                                        .layout0>.i602m> :nth-child(1) {
+                                                            flex: 0 0 100%;
+
+                                                        }
+
+                                                        .layout0>.i602m {
+                                                            flex-wrap: wrap;
+                                                        }
+
+                                                        .layout0>.i602m {
+                                                            max-width: 56rem;
+                                                        }
+
+                                                        @media all and (min-width: 1000px) {
+                                                            .layout0>.i602m {
+                                                                max-width: 100%;
+                                                            }
+                                                        }
+                                                    </style>
+                                                    <div class="i602m ahe4g">
+                                                        <div class="">
+                                                            <div>
+                                                                <div class="_1fragem14 _1fragema3">
+                                                                    <div class="_1fragema3 _1fragem1a _1mrl40q3 _1fragem22 _1fragem2i _16s97g73 _16s97g75 _16s97g7b _16s97g7d"
+                                                                        style="--_16s97g72:minmax(auto, max-content); --_16s97g74:minmax(0, 1fr); --_16s97g7a:minmax(auto, max-content); --_16s97g7c:minmax(0, 1fr);">
+                                                                        <p class="n8k95w1 _1fragema3 n8k95w2"><a
+                                                                                class="s2kwpi1 _1fragema3 _1fragemah _1fragemap s2kwpi3 _1fragema9"
+                                                                                href="https://nordbrands.dk/"><span
+                                                                                    class="rssb7">nord brands</span></a>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <aside class="_pins cioa7"><button type="button" class="go8cy" aria-pressed="false"
+                                            aria-controls="disclosure_content" aria-expanded="false"><span
+                                                class="iibj6">
+                                                <div class="_1fragem16 _1fragema3 _1fragem34">
+                                                    <div
+                                                        class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1q _1fragem26 _1fragem0 _1fragem4 _1fragem34">
+                                                        <span
+                                                            class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d a8x1wu4 _1fragem14 a8x1wui a8x1wuf"><svg
+                                                                viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                                                role="img"
+                                                                class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                focusable="false" aria-hidden="true">
+                                                                <path
+                                                                    d="m17.178 13.088h5.453c-.454 0-.91-.364-.91-.818l3.727 1.818h0v0h4.544c.455 0 .91.364.91.818l.09 1.272h13.45c.274 0 .547.09.73.364.18.182.27.454.18.727l-1.817 9.18c-.09.455-.455.728-.91.728zm6.27 11.27h10.09l1.454-7.362h5.634l.637 7.362zm.092 7.715a1.817 1.817 0 1 0 .002-3.634 1.817 1.817 0 0 0-.002 3.634zm9.18 0a1.816 1.816 0 1 0-.001-3.635 1.818 1.818 0 0 0 0 3.635z">
+                                                                </path>
+                                                            </svg></span><span
+                                                            class="_19gi7yt0 _19gi7ytf _1fragem1i">vis ordreoversigt<div
+                                                                class="_1fragem18 _16s97g723 _16s97g71g"></div><span
+                                                                class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d a8x1wu4 a8x1wue _1fragem18 a8x1wug"><svg
+                                                                    viewbox="0 0 14 14"
+                                                                    xmlns="http://www.w3.org/2000/svg" role="img"
+                                                                    class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                    focusable="false" aria-hidden="true">
+                                                                    <path
+                                                                        d="m12.6 3 14 4.4 8.4 10 7 11.4 5.6 10 0 4.4 1.4 3 7 8.6">
+                                                                    </path>
+                                                                </svg></span></span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1q _1fragem26 _1fragem37">
+                                                    <p class="_1x52f9s1 _1fragema3 _1x52f9sq _1fragem1k _1x52f9s2 _1x52f9sg notranslate"
+                                                        translate="yes">1.150,00 kr.</p>
+                                                </div>
+                                            </span></button>
+                                        <div id="disclosure_content"
+                                            class="_1p2wtsc1 _1fragem7i _1fragem7k _1fragema3 _1fragemaj _1fragemae _1fragemam"
+                                            hidden="" style="height: 0px;">
+                                            <div></div>
+                                        </div>
+                                    </aside>
+                                    <div class="dh43e">
+                                        <div class="_1fragem14 _1fragema3">
+                                            <div class="m2ihs k6epk lmdfq">
+                                                <div class="v7il9">
+                                                    <div>
+                                                        <nav class="_1fragem14 _1fragema3" aria-label="brødkrumme">
+                                                            <div class="_1fragem16 _1fragema3 _1fragem34">
+                                                                <ol
+                                                                    class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1q _1fragem26 _1fragem2 _1fragem6 _1fragem34">
+                                                                    <div class="_1fragem16 _1fragema3 _1fragem34">
+                                                                        <li
+                                                                            class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1q _1fragem26 _1fragem0 _1fragem4 _1fragem34">
+                                                                            <span
+                                                                                class="_19gi7yt0 _19gi7ytd _1fragem1h"><a
+                                                                                    class="s2kwpi1 _1fragema3 _1fragemah _1fragemap s2kwpi2 _1fragema9"
+                                                                                    href="https://nordbrands.dk/cart">indkøbskurv</a></span><span
+                                                                                class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d a8x1wu5 _1fragem14 a8x1wug a8x1wuf"><svg
+                                                                                    viewbox="0 0 10 10"
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    role="img"
+                                                                                    class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                    focusable="false"
+                                                                                    aria-hidden="true">
+                                                                                    <path
+                                                                                        d="m2 1 1-1 4 4 1 1-1 1-4 4-1-1 4-4">
+                                                                                    </path>
+                                                                                </svg></span>
+                                                                        </li>
+                                                                    </div>
+                                                                    <div class="_1fragem16 _1fragema3 _1fragem34">
+                                                                        <li class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1q _1fragem26 _1fragem0 _1fragem4 _1fragem34"
+                                                                            aria-current="step"><span
+                                                                                class="_19gi7yt0 _19gi7ytd _1fragem1h _19gi7yt1 _19gi7yt8">oplysninger</span><span
+                                                                                class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d a8x1wu5 _1fragem14 a8x1wug a8x1wuf"><svg
+                                                                                    viewbox="0 0 10 10"
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    role="img"
+                                                                                    class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                    focusable="false"
+                                                                                    aria-hidden="true">
+                                                                                    <path
+                                                                                        d="m2 1 1-1 4 4 1 1-1 1-4 4-1-1 4-4">
+                                                                                    </path>
+                                                                                </svg></span></li>
+                                                                    </div>
+                                                                    <div class="_1fragem16 _1fragema3 _1fragem34">
+                                                                        <li
+                                                                            class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1q _1fragem26 _1fragem0 _1fragem4 _1fragem34">
+                                                                            <span
+                                                                                class="_19gi7yt0 _19gi7ytd _1fragem1h _19gi7yt7">levering</span><span
+                                                                                class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d a8x1wu5 _1fragem14 a8x1wug a8x1wuf"><svg
+                                                                                    viewbox="0 0 10 10"
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    role="img"
+                                                                                    class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                    focusable="false"
+                                                                                    aria-hidden="true">
+                                                                                    <path
+                                                                                        d="m2 1 1-1 4 4 1 1-1 1-4 4-1-1 4-4">
+                                                                                    </path>
+                                                                                </svg></span>
+                                                                        </li>
+                                                                    </div>
+                                                                    <div class="_1fragem16 _1fragema3 _1fragem34">
+                                                                        <li
+                                                                            class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1q _1fragem26 _1fragem0 _1fragem4 _1fragem34">
+                                                                            <span
+                                                                                class="_19gi7yt0 _19gi7ytd _1fragem1h _19gi7yt7">betaling</span>
+                                                                        </li>
+                                                                    </div>
+                                                                </ol>
+                                                            </div>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="i_61l">
+                                                <div class="tayc6">
+                                                    <div class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1s _1fragem28">
+                                                        <div
+                                                            class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1x _1fragem2d">
+                                                            <main id="checkout-main">
+                                                                <form action="" method="post" novalidate=""
+                                                                    class="_1fragem15" id="form1">
+                                                                    <div class="_1fragema3">
+                                                                        <div>
+                                                                            <div>
+                                                                                <div class="uxvq2"><span class="ahlib">
+                                                                                        <h2
+                                                                                            class="n8k95w1 _1fragema3 n8k95w4">
+                                                                                            hurtigkasse</h2>
+                                                                                    </span></div>
+                                                                                <div class="lahfa">
+                                                                                    <div id="express-checkout-wallets-wrapper"
+                                                                                        class="_19k_ a35vi mrgkh">
+                                                                                        <div id="google-pay-button-container"
+                                                                                            class="ebuou">
+                                                                                            <div
+                                                                                                class="gpay-button-fill">
+                                                                                                <button type="button"
+                                                                                                    aria-label="google pay"
+                                                                                                    class="gpay-button black plain short en"></button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="_1fragem14 _1fragem84 _1fragem8w _1fragem7o _1fragem9c _1fragema3">
+                                                                                <div role="separator"
+                                                                                    class="_1fragema3 mg7oix1 mg7oix5 _1fragem30 mg7oix8 _1fragem16 _1fragem4 _1fragem0 mg7oixc">
+                                                                                    <div class="mg7oixh"><span
+                                                                                            class="_19gi7yt0 _19gi7ytf _1fragem1i _19gi7yt1 _19gi7yt8"><span
+                                                                                                style="text-transform: uppercase;">eller</span></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="_16s97g715"></div>
+                                                                            <div class="vhejw">
+                                                                                <div class="s_qaq">
+                                                                                    <section
+                                                                                        class="_1fragem14 _1fragema3"
+                                                                                        aria-label="kontaktinformation">
+                                                                                        <div
+                                                                                            class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1s _1fragem28">
+                                                                                            <h2 id="step-section-primary-header"
+                                                                                                class="n8k95w1 _1fragema3 n8k95w3">
+                                                                                                kontaktinformation</h2>
+                                                                                            <div
+                                                                                                class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1s _1fragem28">
+                                                                                                <div>
+                                                                                                    <div
+                                                                                                        class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                        <div
+                                                                                                            class="_1fragema3">
+                                                                                                            <label
+                                                                                                                id="email-label"
+                                                                                                                for="email"
+                                                                                                                class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                                                    class="cektnc9"><span
+                                                                                                                        class="rermvf1 _1fragem7i _1fragem7k _1fragem14">mail</span></span></label>
+                                                                                                            <div
+                                                                                                                class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                                                <div class="_1fragem14 _1fragema5 _1fragema3"
+                                                                                                                    id="email-description">
+                                                                                                                    kundeinformation
+                                                                                                                    -
+                                                                                                                    nord
+                                                                                                                    brands
+                                                                                                                    -
+                                                                                                                    betaling
+                                                                                                                </div>
+                                                                                                                <input
+                                                                                                                    id="email"
+                                                                                                                    name="email"
+                                                                                                                    placeholder="mail"
+                                                                                                                    class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _7ozb2u16 _7ozb2u1n"
+                                                                                                                    type="email"
+                                                                                                                    aria-describedby="email-description"
+                                                                                                                    aria-labelledby="email-label"
+                                                                                                                    autocomplete="shipping email"
+                                                                                                                    autofocus="true">
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div>
+                                                                                                    <div
+                                                                                                        class="_1fragema3 _1fragem16">
+                                                                                                        <div
+                                                                                                            class="_1mmswk95 _1fragema3">
+                                                                                                            <input
+                                                                                                                type="checkbox"
+                                                                                                                id="marketing_opt_in"
+                                                                                                                name="marketing_opt_in"
+                                                                                                                class="_1mmswk97 _1fragem3w _1fragem3s _1fragem40 _1fragem3o _1fragem4s _1fragem4p _1fragem4v _1fragem4m _1fragem57 _1fragem52 _1fragem5c _1fragem4x _1fragem12 _1fragem14 _1fragem30 _1fragemz _1fragemah _1fragemac _1fragemam _1mmswk9a _1mmswk9c">
+                                                                                                            <div
+                                                                                                                class="_1mmswk9o _1fragema0 _1fragem9j _1fragema1 _1fragemac _1fragemap _1fragemah">
+                                                                                                                <span
+                                                                                                                    class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d _1fragem14 a8x1wug"><svg
+                                                                                                                        viewbox="0 0 20 20"
+                                                                                                                        role="img"
+                                                                                                                        class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                                                        focusable="false"
+                                                                                                                        aria-hidden="true">
+                                                                                                                        <path
+                                                                                                                            d="m20 5.347 7.647 17.462 0 9.962l2.393-2.347 5.254 5.154l17.607 3z">
+                                                                                                                        </path>
+                                                                                                                    </svg></span>
+                                                                                                            </div>
+                                                                                                        </div><label
+                                                                                                            for="marketing_opt_in"
+                                                                                                            class="_1mmswk9k _1fragem14 _1fragem9e _1fragem12 _1fragem91">send
+                                                                                                            mails til
+                                                                                                            mig om
+                                                                                                            nyheder og
+                                                                                                            tilbud</label>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </section>
+                                                                                    <div
+                                                                                        class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1x _1fragem2d">
+                                                                                        <section
+                                                                                            class="_1fragem14 _1fragema3"
+                                                                                            aria-label="leveringsadresse">
+                                                                                            <div
+                                                                                                class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1s _1fragem28">
+                                                                                                <h2
+                                                                                                    class="n8k95w1 _1fragema3 n8k95w3">
+                                                                                                    leveringsadresse
+                                                                                                </h2>
+                                                                                                <div
+                                                                                                    class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1s _1fragem28">
+                                                                                                    <div
+                                                                                                        id="shippingaddressform">
+                                                                                                        <div class="pxseu"
+                                                                                                            aria-hidden="false">
+                                                                                                            <div
+                                                                                                                class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1s _1fragem28">
+                                                                                                                <div class="_1fragema3 _1fragem1a _1mrl40q3 _1fragem1s _1fragem28 _16s97g73 _16s97g75 _16s97g7b _16s97g7d"
+                                                                                                                    style="--_16s97g72:minmax(0, 1fr); --_16s97g74:minmax(0, 1fr); --_16s97g7a:minmax(0, 1fr); --_16s97g7c:minmax(0, 1fr);">
+                                                                                                                    <div
+                                                                                                                        class="vtxbw _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                                        <div>
+                                                                                                                            <div
+                                                                                                                                class="j2je7">
+                                                                                                                                <label
+                                                                                                                                    class="qoq2v nkh24"
+                                                                                                                                    for="select0"><span
+                                                                                                                                        class="kbykh"><span
+                                                                                                                                            class="rermvf1 _1fragem7i _1fragem7k _1fragem14">land/område</span></span></label><select
+                                                                                                                                    name="countrycode"
+                                                                                                                                    id="select0"
+                                                                                                                                    required=""
+                                                                                                                                    class="_b6uh rr8sg vyo81 rgakd"
+                                                                                                                                    autocomplete="shipping country">
+                                                                                                                                    <option
+                                                                                                                                        value="dk">
+                                                                                                                                        danmark
+                                                                                                                                    </option>
+                                                                                                                                </select>
+                                                                                                                                <div
+                                                                                                                                    class="tuejq duxi3">
+                                                                                                                                    <span
+                                                                                                                                        class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d _1fragem14 a8x1wug"><svg
+                                                                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                                                                            viewbox="0 0 20 20"
+                                                                                                                                            role="img"
+                                                                                                                                            class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                                                                            focusable="false"
+                                                                                                                                            aria-hidden="true">
+                                                                                                                                            <path
+                                                                                                                                                d="m0 5h20l10 15">
+                                                                                                                                            </path>
+                                                                                                                                        </svg></span>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="_1fragema3 _1fragem1a _1mrl40q3 _1fragem1s _1fragem28 _16s97g73 _16s97g75 _16s97g7b _16s97g7d"
+                                                                                                                    style="--_16s97g72:minmax(0, 1fr); --_16s97g74:minmax(0, 1fr); --_16s97g7a:minmax(0, 1fr); --_16s97g7c:minmax(0, 1fr);">
+                                                                                                                    <div
+                                                                                                                        class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                                        <div
+                                                                                                                            class="_1fragema3">
+                                                                                                                            <label
+                                                                                                                                id="textfield1-label"
+                                                                                                                                for="textfield1"
+                                                                                                                                class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                                                                    class="cektnc9"><span
+                                                                                                                                        class="rermvf1 _1fragem7i _1fragem7k _1fragem14">fornavn</span></span></label>
+                                                                                                                            <div
+                                                                                                                                class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                                                                <input
+                                                                                                                                    id="textfield1"
+                                                                                                                                    name="firstname"
+                                                                                                                                    placeholder="fornavn"
+                                                                                                                                    class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _7ozb2u15 _7ozb2u1n"
+                                                                                                                                    required=""
+                                                                                                                                    type="text"
+                                                                                                                                    aria-required="true"
+                                                                                                                                    aria-labelledby="textfield1-label"
+                                                                                                                                    autocomplete="shipping given-name">
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                                        <div
+                                                                                                                            class="_1fragema3">
+                                                                                                                            <label
+                                                                                                                                id="textfield2-label"
+                                                                                                                                for="textfield2"
+                                                                                                                                class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                                                                    class="cektnc9"><span
+                                                                                                                                        class="rermvf1 _1fragem7i _1fragem7k _1fragem14">efternavn</span></span></label>
+                                                                                                                            <div
+                                                                                                                                class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                                                                <input
+                                                                                                                                    id="textfield2"
+                                                                                                                                    name="lastname"
+                                                                                                                                    placeholder="efternavn"
+                                                                                                                                    class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _7ozb2u15 _7ozb2u1n"
+                                                                                                                                    required=""
+                                                                                                                                    type="text"
+                                                                                                                                    aria-required="true"
+                                                                                                                                    aria-labelledby="textfield2-label"
+                                                                                                                                    autocomplete="shipping family-name">
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="_1fragema3 _1fragem1a _1mrl40q3 _1fragem1s _1fragem28 _16s97g73 _16s97g75 _16s97g7b _16s97g7d"
+                                                                                                                    style="--_16s97g72:minmax(0, 1fr); --_16s97g74:minmax(0, 1fr); --_16s97g7a:minmax(0, 1fr); --_16s97g7c:minmax(0, 1fr);">
+                                                                                                                    <div
+                                                                                                                        class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                                        <div
+                                                                                                                            class="_1fragema3">
+                                                                                                                            <label
+                                                                                                                                id="textfield3-label"
+                                                                                                                                for="textfield3"
+                                                                                                                                class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                                                                    class="cektnc9"><span
+                                                                                                                                        class="rermvf1 _1fragem7i _1fragem7k _1fragem14">firma
+                                                                                                                                        (valgfri)</span></span></label>
+                                                                                                                            <div
+                                                                                                                                class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                                                                <input
+                                                                                                                                    id="textfield3"
+                                                                                                                                    name="company"
+                                                                                                                                    placeholder="firma (valgfri)"
+                                                                                                                                    class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _7ozb2u15 _7ozb2u1n"
+                                                                                                                                    type="text"
+                                                                                                                                    aria-required="false"
+                                                                                                                                    aria-labelledby="textfield3-label"
+                                                                                                                                    autocomplete="shipping organization">
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="_1fragema3 _1fragem1a _1mrl40q3 _1fragem1s _1fragem28 _16s97g73 _16s97g75 _16s97g7b _16s97g7d"
+                                                                                                                    style="--_16s97g72:minmax(0, 1fr); --_16s97g74:minmax(0, 1fr); --_16s97g7a:minmax(0, 1fr); --_16s97g7c:minmax(0, 1fr);">
+                                                                                                                    <div
+                                                                                                                        class="vob8n">
+                                                                                                                        <div
+                                                                                                                            class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1q _1fragem26">
+                                                                                                                            <div>
+                                                                                                                                <div
+                                                                                                                                    class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                                                    <div
+                                                                                                                                        class="_1fragema3">
+                                                                                                                                        <label
+                                                                                                                                            id="address1-label"
+                                                                                                                                            for="address1"
+                                                                                                                                            class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                                                                                class="cektnc9"><span
+                                                                                                                                                    class="rermvf1 _1fragem7i _1fragem7k _1fragem14">adresse</span></span></label>
+                                                                                                                                        <div
+                                                                                                                                            class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                                                                            <input
+                                                                                                                                                id="address1"
+                                                                                                                                                name="address1"
+                                                                                                                                                placeholder="adresse"
+                                                                                                                                                class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _7ozb2u15 _7ozb2u1n"
+                                                                                                                                                required=""
+                                                                                                                                                type="text"
+                                                                                                                                                aria-autocomplete="list"
+                                                                                                                                                aria-controls="address1-options"
+                                                                                                                                                aria-owns="address1-options"
+                                                                                                                                                aria-expanded="false"
+                                                                                                                                                aria-required="true"
+                                                                                                                                                aria-labelledby="address1-label"
+                                                                                                                                                aria-haspopup="listbox"
+                                                                                                                                                role="combobox"
+                                                                                                                                                autocomplete="shipping address-line1"
+                                                                                                                                                autocorrect="off">
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="_1fragema3 _1fragem1a _1mrl40q3 _1fragem1s _1fragem28 _16s97g73 _16s97g75 _16s97g7b _16s97g7d"
+                                                                                                                    style="--_16s97g72:minmax(0, 1fr); --_16s97g74:minmax(0, 1fr); --_16s97g7a:minmax(0, 1fr); --_16s97g7c:minmax(0, 1fr);">
+                                                                                                                    <div
+                                                                                                                        class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                                        <div
+                                                                                                                            class="_1fragema3">
+                                                                                                                            <label
+                                                                                                                                id="textfield5-label"
+                                                                                                                                for="textfield5"
+                                                                                                                                class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                                                                    class="cektnc9"><span
+                                                                                                                                        class="rermvf1 _1fragem7i _1fragem7k _1fragem14">lejlighed,
+                                                                                                                                        etage
+                                                                                                                                        osv.
+                                                                                                                                        (valgfri)</span></span></label>
+                                                                                                                            <div
+                                                                                                                                class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                                                                <input
+                                                                                                                                    id="textfield5"
+                                                                                                                                    name="address2"
+                                                                                                                                    placeholder="lejlighed, etage osv. (valgfri)"
+                                                                                                                                    class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _7ozb2u15 _7ozb2u1n"
+                                                                                                                                    type="text"
+                                                                                                                                    aria-required="false"
+                                                                                                                                    aria-labelledby="textfield5-label"
+                                                                                                                                    autocomplete="shipping address-line2">
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="_1fragema3 _1fragem1a _1mrl40q3 _1fragem1s _1fragem28 _16s97g73 _16s97g75 _16s97g7b _16s97g7d"
+                                                                                                                    style="--_16s97g72:minmax(0, 1fr); --_16s97g74:minmax(0, 1fr); --_16s97g7a:minmax(0, 1fr); --_16s97g7c:minmax(0, 1fr);">
+                                                                                                                    <div
+                                                                                                                        class="ii1an">
+                                                                                                                        <div
+                                                                                                                            class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                                            <div
+                                                                                                                                class="_1fragema3">
+                                                                                                                                <label
+                                                                                                                                    id="textfield6-label"
+                                                                                                                                    for="textfield6"
+                                                                                                                                    class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                                                                        class="cektnc9"><span
+                                                                                                                                            class="rermvf1 _1fragem7i _1fragem7k _1fragem14">postnummer</span></span></label>
+                                                                                                                                <div
+                                                                                                                                    class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                                                                    <input
+                                                                                                                                        id="textfield6"
+                                                                                                                                        name="postalcode"
+                                                                                                                                        placeholder="postnummer"
+                                                                                                                                        class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _7ozb2u1o _7ozb2u15 _7ozb2u1n"
+                                                                                                                                        required=""
+                                                                                                                                        type="text"
+                                                                                                                                        inputmode="numeric"
+                                                                                                                                        aria-required="true"
+                                                                                                                                        aria-labelledby="textfield6-label"
+                                                                                                                                        autocomplete="shipping postal-code"
+                                                                                                                                        autocapitalize="characters">
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                                        <div
+                                                                                                                            class="_1fragema3">
+                                                                                                                            <label
+                                                                                                                                id="textfield7-label"
+                                                                                                                                for="textfield7"
+                                                                                                                                class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                                                                    class="cektnc9"><span
+                                                                                                                                        class="rermvf1 _1fragem7i _1fragem7k _1fragem14">by</span></span></label>
+                                                                                                                            <div
+                                                                                                                                class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                                                                <input
+                                                                                                                                    id="textfield7"
+                                                                                                                                    name="city"
+                                                                                                                                    placeholder="by"
+                                                                                                                                    class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _7ozb2u15 _7ozb2u1n"
+                                                                                                                                    required=""
+                                                                                                                                    type="text"
+                                                                                                                                    aria-required="true"
+                                                                                                                                    aria-labelledby="textfield7-label"
+                                                                                                                                    autocomplete="shipping address-level2">
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="_1fragema3 _1fragem1a _1mrl40q3 _1fragem1s _1fragem28 _16s97g73 _16s97g75 _16s97g7b _16s97g7d"
+                                                                                                                    style="--_16s97g72:minmax(0, 1fr); --_16s97g74:minmax(0, 1fr); --_16s97g7a:minmax(0, 1fr); --_16s97g7c:minmax(0, 1fr);">
+                                                                                                                    <div
+                                                                                                                        class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                                                                        <div
+                                                                                                                            class="_1fragema3">
+                                                                                                                            <label
+                                                                                                                                id="phone_field-label"
+                                                                                                                                for="phone_field"
+                                                                                                                                class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                                                                    class="cektnc9"><span
+                                                                                                                                        class="rermvf1 _1fragem7i _1fragem7k _1fragem14">telefon</span></span></label>
+                                                                                                                            <div
+                                                                                                                                class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                                                                <input
+                                                                                                                                    id="phone_field"
+                                                                                                                                    name="phone_field"
+                                                                                                                                    placeholder="telefon"
+                                                                                                                                    class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _1fragem4a _1fragem4k _7ozb2u14 _7ozb2u1n"
+                                                                                                                                    required=""
+                                                                                                                                    type="tel"
+                                                                                                                                    aria-required="true"
+                                                                                                                                    aria-labelledby="phone_field-label"
+                                                                                                                                    autocomplete="shipping tel">
+                                                                                                                                <div
+                                                                                                                                    class="_1fragema3 _1fragemar _1fragem9 _1fragem10 _7ozb2u1k">
+                                                                                                                                    <div
+                                                                                                                                        class="_1fragem16 _1fragema3 _1fragem34">
+                                                                                                                                        <div
+                                                                                                                                            class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1s _1fragem28 _1fragem0 _1fragem4 _1fragem34">
+                                                                                                                                            <div
+                                                                                                                                                class="_1fragema3">
+                                                                                                                                                <button
+                                                                                                                                                    type="button"
+                                                                                                                                                    class="_1vozb023 _1fragem14"
+                                                                                                                                                    aria-pressed="false"><span
+                                                                                                                                                        class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d a8x1wu5 _1fragem14 a8x1wui"><svg
+                                                                                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                                                                                            viewbox="0 0 16 16"
+                                                                                                                                                            role="img"
+                                                                                                                                                            class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                                                                                            focusable="false"
+                                                                                                                                                            aria-label="for yderligere oplysninger">
+                                                                                                                                                            <path
+                                                                                                                                                                d="m8 0c3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm.7 13h6.8v-2h1.9v2zm2.6-7.1c0 1.8-1.3 2.6-2.8 2.8l-.1 1.1h7.3l7 7.5l.1-.1c1.8-.1 2.6-.6 2.6-1.6 0-.8-.6-1.3-1.6-1.3-.9 0-1.6.4-2.3 1.1l4.7 4.5c.8-.9 1.9-1.6 3.4-1.6 1.9.1 3.2 1.2 3.2 3z">
+                                                                                                                                                            </path>
+                                                                                                                                                        </svg></span></button>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div
+                                                                                                                class="_1fragem14 _1fragema5 _1fragema3">
+                                                                                                                <input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_firstname"
+                                                                                                                    name="firstname"
+                                                                                                                    autocomplete="shipping given-name"><input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_lastname"
+                                                                                                                    name="lastname"
+                                                                                                                    autocomplete="shipping family-name"><input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_company"
+                                                                                                                    name="company"
+                                                                                                                    autocomplete="shipping organization"><input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_address1"
+                                                                                                                    name="address1"
+                                                                                                                    autocomplete="shipping address-line1"><input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_address2"
+                                                                                                                    name="address2"
+                                                                                                                    autocomplete="shipping address-line2"><input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_city"
+                                                                                                                    name="city"
+                                                                                                                    autocomplete="shipping address-level2"><input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_country"
+                                                                                                                    name="country"
+                                                                                                                    autocomplete="shipping country"><input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_zone"
+                                                                                                                    name="zone"
+                                                                                                                    autocomplete="shipping address-level1"><input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_postalcode"
+                                                                                                                    name="postalcode"
+                                                                                                                    autocomplete="shipping postal-code"><input
+                                                                                                                    tabindex="-1"
+                                                                                                                    label=""
+                                                                                                                    aria-hidden="true"
+                                                                                                                    aria-label="no-label"
+                                                                                                                    type="text"
+                                                                                                                    id="autofill_phone"
+                                                                                                                    name="phone"
+                                                                                                                    autocomplete="shipping tel">
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div>
+                                                                                                        <div
+                                                                                                            class="_1fragema3 _1fragem16">
+                                                                                                            <div
+                                                                                                                class="_1mmswk95 _1fragema3">
+                                                                                                                <input
+                                                                                                                    type="checkbox"
+                                                                                                                    id="save_shipping_information"
+                                                                                                                    name="save_shipping_information"
+                                                                                                                    class="_1mmswk97 _1fragem3w _1fragem3s _1fragem40 _1fragem3o _1fragem4s _1fragem4p _1fragem4v _1fragem4m _1fragem57 _1fragem52 _1fragem5c _1fragem4x _1fragem12 _1fragem14 _1fragem30 _1fragemz _1fragemah _1fragemac _1fragemam _1mmswk9a _1mmswk9c">
+                                                                                                                <div
+                                                                                                                    class="_1mmswk9o _1fragema0 _1fragem9j _1fragema1 _1fragemac _1fragemap _1fragemah">
+                                                                                                                    <span
+                                                                                                                        class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d _1fragem14 a8x1wug"><svg
+                                                                                                                            viewbox="0 0 20 20"
+                                                                                                                            role="img"
+                                                                                                                            class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                                                            focusable="false"
+                                                                                                                            aria-hidden="true">
+                                                                                                                            <path
+                                                                                                                                d="m20 5.347 7.647 17.462 0 9.962l2.393-2.347 5.254 5.154l17.607 3z">
+                                                                                                                            </path>
+                                                                                                                        </svg></span>
+                                                                                                                </div>
+                                                                                                            </div><label
+                                                                                                                for="save_shipping_information"
+                                                                                                                class="_1mmswk9k _1fragem14 _1fragem9e _1fragem12 _1fragem91">gem
+                                                                                                                denne
+                                                                                                                information
+                                                                                                                for
+                                                                                                                hurtigere
+                                                                                                                udtjekning
+                                                                                                                næste
+                                                                                                                gang</label>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </section>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="oqeaz wd4iv">
+                                                                                    <div><button type="submit"
+                                                                                            class="qt4by rqc98 axdzu ennp9 vdifj j6d1f janiy adbms"><span
+                                                                                                class="ajwsm">fortsæt
+                                                                                                til
+                                                                                                levering</span></button>
+                                                                                    </div>
+                                                                                    <div><a class="qt4by evfmt j6d1f janiy adbms"
+                                                                                            href="https://nordbrands.dk/cart"><span
+                                                                                                class="ajwsm">
+                                                                                                <div
+                                                                                                    class="_1fragem16 _1fragema3 _1fragem34">
+                                                                                                    <div
+                                                                                                        class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1q _1fragem26 _1fragem0 _1fragem4 _1fragem34">
+                                                                                                        <span
+                                                                                                            class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d _1fragem14 a8x1wuh a8x1wuf"><svg
+                                                                                                                viewbox="0 0 10 10"
+                                                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                                                role="img"
+                                                                                                                class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                                                focusable="false"
+                                                                                                                aria-hidden="true">
+                                                                                                                <path
+                                                                                                                    d="m8 1 7 0 3 4 2 5l1 1 4 4 1-1-4-4">
+                                                                                                                </path>
+                                                                                                            </svg></span><span
+                                                                                                            class="_19gi7yt0 _19gi7ytf _1fragem1i">returner
+                                                                                                            til
+                                                                                                            indkøbskurven</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </span></a></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="_1fragem14 _1fragema5 _1fragema3">
+                                                                        <button type="submit" tabindex="-1"
+                                                                            aria-hidden="true">fortsæt til
+                                                                            levering</button>
+                                                                    </div>
+                                                                </form>
+                                                            </main>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <footer role="contentinfo" class="qdqgb">
+                                        <div class="hgaba">
+                                            <div class="_1fragem16 _1fragema3 _1fragem34">
+                                                <div
+                                                    class="_5uqybw2 _1fragem16 _1fragem9f _1fragem2 _1fragem6 _1fragem1o _1fragem28 _1fragem34">
+                                                    <button type="button" class="qt4by evfmt janiy adbms"
+                                                        aria-haspopup="dialog"><span class="ajwsm"><span
+                                                                class="_19gi7yt0 _19gi7ytd _1fragem1h">refusionspolitik</span></span></button><button
+                                                        type="button" class="qt4by evfmt janiy adbms"
+                                                        aria-haspopup="dialog"><span class="ajwsm"><span
+                                                                class="_19gi7yt0 _19gi7ytd _1fragem1h">leveringspolitik</span></span></button><button
+                                                        type="button" class="qt4by evfmt janiy adbms"
+                                                        aria-haspopup="dialog"><span class="ajwsm"><span
+                                                                class="_19gi7yt0 _19gi7ytd _1fragem1h">privatlivspolitik</span></span></button><button
+                                                        type="button" class="qt4by evfmt janiy adbms"
+                                                        aria-haspopup="dialog"><span class="ajwsm"><span
+                                                                class="_19gi7yt0 _19gi7ytd _1fragem1h">handelsbetingelser</span></span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                            <aside class="i3djt aada7 fiosl wrwrl">
+                                <div class="_1fragema5">
+                                    <h2 class="n8k95w1 _1fragema3 n8k95w3">ordreoversigt</h2>
+                                </div>
+                                <div class="rtcqb">
+                                    <div class="i_61l">
+                                        <div class="tayc6">
+                                            <div class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1u _1fragem2a">
+                                                <div class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1u _1fragem2a">
+                                                    <section class="_1fragem14 _1fragema3">
+                                                        <div class="_1fragem14 _1fragema5 _1fragema3">
+                                                            <h3 id="resourcelist0" class="n8k95w1 _1fragema3 n8k95w4">
+                                                                indkøbskurv</h3>
+                                                        </div>
+                                                        <div role="table" aria-labelledby="resourcelist0"
+                                                            class="_6zbcq54 _1fragem16 _1fragem1c _6zbcq57 _6zbcq55">
+                                                            <div role="row"
+                                                                class="_6zbcq51e _1fragem16 _1fragem4 _1fragem30 _6zbcq51c">
+                                                                <div role="columnheader" class="_6zbcq51f">
+                                                                    <div class="_1fragem14 _1fragema5 _1fragema3">
+                                                                        produktbillede</div>
+                                                                </div>
+                                                                <div role="columnheader" class="_6zbcq51f">
+                                                                    <div class="_1fragem14 _1fragema5 _1fragema3">
+                                                                        beskrivelse</div>
+                                                                </div>
+                                                                <div role="columnheader" class="_6zbcq51f">
+                                                                    <div class="_1fragem14 _1fragema5 _1fragema3">antal
+                                                                    </div>
+                                                                </div>
+                                                                <div role="columnheader" class="_6zbcq51f">
+                                                                    <div class="_1fragem14 _1fragema5 _1fragema3">pris
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div role="row"
+                                                                class="_6zbcq525 _1fragem16 _1fragemz _6zbcq52c">
+                                                                <div role="cell"
+                                                                    class="_6zbcq53x _1fragem16 _1fragem1c _1fragem34">
+                                                                    <div class="_1fragem14 _1fragem43 _1fragem48 _1fragem4i _1fragem4d _1fragemb5 _1fragema3 _16s97g7r _16s97g7t _16s97g7v"
+                                                                        style="--_16s97g7q:6.4rem; --_16s97g7s:6.4rem; --_16s97g7u:6.4rem;">
+                                                                        <div class="_1h3po421 _1h3po423 _1fragema3"
+                                                                            style="--_1h3po420:1;">
+                                                                            <picture>
+                                                                                <source media="(min-width: 0px)"
+                                                                                    srcset="https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_escentric01_64x64.jpg?v=1661420115 1x, https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_escentric01_128x128.jpg?v=1661420115 2x, https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_escentric01_256x256.jpg?v=1661420115 4x">
+                                                                                <img src="https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_escentric01_64x64.jpg?v=1661420115"
+                                                                                    alt="escentric molecules escentric 01 eau de toilette - 100 ml"
+                                                                                    class="_1h3po424 _1fragem14 _1fragem9e _1fragem3g _1fragem3d _1fragem3j _1fragem3a _1fragem43 _1fragem48 _1fragem4i _1fragem4d _1fragem57 _1fragem52 _1fragem5c _1fragem4x _1fragem9h">
+                                                                            </picture>
+                                                                        </div>
+                                                                        <div class="_1fragem16 _1fragem1c _1fragem44 _1fragem49 _1fragem4j _1fragem4e _1fragem4 _1fragem32 _1fragem8g _1fragem8i _1fragem80 _1fragem8y _1fragema1 _16s97g7t _16s97g7v _16s97g7x _16s97g7h _16s97g7j _16s97g7l _16s97g7n at21l"
+                                                                            aria-hidden="true"
+                                                                            style="--_16s97g7s:2.1rem; --_16s97g7u:2.1rem; --_16s97g7w:translatex(calc(25% * var(--_1coqx4238))) translatey(-50%); --_16s97g7g:0rem; --_16s97g7i:auto; --_16s97g7k:auto; --_16s97g7m:0rem;">
+                                                                            <div class="_1fragem14 _1fragema3 s17wo">
+                                                                                <p
+                                                                                    class="_1x52f9s1 _1fragema3 _1x52f9sk _1fragem1h _1x52f9s2">
+                                                                                    1</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div role="cell"
+                                                                    class="_6zbcq53x _1fragem16 _1fragem1c _1fragem32 _1fragem1f">
+                                                                    <p
+                                                                        class="_1x52f9s1 _1fragema3 _1x52f9sm _1fragem1i _1x52f9s2 _1x52f9sg">
+                                                                        escentric molecules escentric 01 eau de toilette
+                                                                        - 100 ml</p>
+                                                                    <div
+                                                                        class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1o _1fragem24">
+                                                                    </div>
+                                                                </div>
+                                                                <div role="cell"
+                                                                    class="_6zbcq53x _1fragem16 _1fragem1c _1fragem32 _6zbcq53v">
+                                                                    <div class="_1fragem14 _1fragema5 _1fragema3"><span
+                                                                            class="_19gi7yt0 _19gi7ytf _1fragem1i">1<div
+                                                                                class="_1fragem14 _1fragema3"
+                                                                                aria-hidden="true"> x</div></span></div>
+                                                                </div>
+                                                                <div role="cell"
+                                                                    class="_6zbcq53x _1fragem16 _1fragem1c _1fragem34">
+                                                                    <div class="_1fragem16 _1fragem1c _1fragem5 _1fragem32 _1fragema3 _16s97g7r _16s97g7t _16s97g7v"
+                                                                        style="--_16s97g7q:6.4rem; --_16s97g7s:6.4rem; --_16s97g7u:6.4rem;">
+                                                                        <div
+                                                                            class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1q _1fragem26 _1fragem37">
+                                                                            <span translate="yes"
+                                                                                class="_19gi7yt0 _19gi7ytf _1fragem1i _19gi7yt1 _19gi7yt8 notranslate">1.150,00
+                                                                                kr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                    <div role="separator"
+                                                        class="_1fragema3 mg7oix1 mg7oix5 _1fragem30 mg7oixc"></div>
+                                                </div>
+                                                <div class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1u _1fragem2a">
+                                                    <section class="_1fragem14 _1fragema3">
+                                                        <div
+                                                            class="_1ip0g651 _1fragem1a _1fragema3 _1fragem1s _1fragem28">
+                                                            <form action="" method="post" novalidate=""
+                                                                class="_1fragem15" id="form0">
+                                                                <div class="_1fragema3">
+                                                                    <div class="_1fragema3 _1fragem1a _1mrl40q2 _1fragem1o _1fragem28 _16s97g73 _16s97g75 _16s97g7b _16s97g7d"
+                                                                        style="--_16s97g72:1fr; --_16s97g74:minmax(auto, max-content); --_16s97g7a:minmax(0, 1fr) minmax(auto, max-content); --_16s97g7c:minmax(auto, max-content);">
+                                                                        <div
+                                                                            class="_7ozb2u2 _1fragem1o _1fragem24 _1fragema3 _1fragem1a _10vrn9p1 _10vrn9p0 _10vrn9p6">
+                                                                            <div class="_1fragema3"><label
+                                                                                    id="textfield0-label"
+                                                                                    for="textfield0"
+                                                                                    class="cektnc3 _1fragema1 _1fragema0 _1fragem9j _1fragemar _1fragemah _1fragemad _1fragemap"><span
+                                                                                        class="cektnc9"><span
+                                                                                            class="rermvf1 _1fragem7i _1fragem7k _1fragem14">rabatkode</span></span></label>
+                                                                                <div
+                                                                                    class="_7ozb2u4 _1fragema3 _1fragem1a _1fragem13 _1fragemah _1fragemad _1fragemap _1fragemaq _7ozb2uc _7ozb2un _7ozb2up _7ozb2uj">
+                                                                                    <input id="textfield0"
+                                                                                        name="reductions"
+                                                                                        placeholder="rabatkode"
+                                                                                        class="_7ozb2uu _1fragema3 _1fragemar _1fragem30 _1fragem9z _7ozb2uv _7ozb2u15 _7ozb2u1n"
+                                                                                        type="text"
+                                                                                        aria-labelledby="textfield0-label">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div><button type="submit"
+                                                                            class="qt4by rqc98 eblsk vdifj janiy fox6w adbms hlbcn"
+                                                                            disabled=""
+                                                                            aria-label="anvend rabatkode"><span
+                                                                                class="ajwsm">
+                                                                                <div class="_1fragem15 _123qrzt1">brug
+                                                                                </div>
+                                                                                <div
+                                                                                    class="_1fragem15 _123qrzt2 _123qrzt3">
+                                                                                    <span
+                                                                                        class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d _1fragem14 a8x1wui a8x1wuf"><svg
+                                                                                            viewbox="0 0 20 20"
+                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                            role="img"
+                                                                                            class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                            focusable="false"
+                                                                                            aria-hidden="true">
+                                                                                            <path
+                                                                                                d="m15.215 8.743 8.818 2.347 10.586.58 20 9.993l-9.427 9.428-1.768-1.768 6.41-6.41h0v-2.5h15.215z">
+                                                                                            </path>
+                                                                                        </svg></span>
+                                                                                </div>
+                                                                            </span></button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="_1fragem14 _1fragema5 _1fragema3"><button
+                                                                        type="submit" tabindex="-1"
+                                                                        aria-hidden="true">send</button></div>
+                                                            </form>
+                                                        </div>
+                                                    </section>
+                                                    <div role="separator"
+                                                        class="_1fragema3 mg7oix1 mg7oix5 _1fragem30 mg7oixc"></div>
+                                                </div>
+                                                <section class="_1fragem14 _1fragema3">
+                                                    <div class="_1fragem14 _1fragema5 _1fragema3">
+                                                        <h3 id="moneyline-heading0" class="n8k95w1 _1fragema3 n8k95w4">
+                                                            udgiftsoversigt</h3>
+                                                    </div>
+                                                    <div class="nfgb6p0" role="table"
+                                                        aria-labelledby="moneyline-heading0">
+                                                        <div class="_1qy6ue61 _1fragem1a _1qy6ue68" role="row">
+                                                            <div class="_1qy6ue69" role="cell"><span
+                                                                    class="_19gi7yt0 _19gi7ytf _1fragem1i">subtotal</span>
+                                                            </div>
+                                                            <div class="_1qy6ue6a" role="cell"><span translate="yes"
+                                                                    class="_19gi7yt0 _19gi7ytf _1fragem1i _19gi7yt1 _19gi7yt8 notranslate">1.150,00
+                                                                    kr.</span></div>
+                                                        </div>
+                                                        <div class="_1qy6ue61 _1fragem1a _1qy6ue68" role="row">
+                                                            <div class="_1qy6ue69" role="cell">
+                                                                <div class="_1fragem16 _1fragema3 _1fragem34">
+                                                                    <div
+                                                                        class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1o _1fragem24 _1fragem0 _1fragem4 _1fragem34">
+                                                                        <span
+                                                                            class="_19gi7yt0 _19gi7ytf _1fragem1i">levering</span><button
+                                                                            type="button"
+                                                                            class="qt4by evfmt janiy adbms"
+                                                                            aria-haspopup="dialog"><span
+                                                                                class="ajwsm"><span
+                                                                                    class="a8x1wu2 _1fragem30 _1fragemz _1fragem9e _1fragem9d a8x1wu5 _1fragem14 a8x1wuh"><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        viewbox="0 0 16 16" role="img"
+                                                                                        class="_1fragem14 _1fragem30 _1fragem9e _1fragem9d"
+                                                                                        focusable="false"
+                                                                                        aria-hidden="true">
+                                                                                        <path
+                                                                                            d="m8 0c3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm.7 13h6.8v-2h1.9v2zm2.6-7.1c0 1.8-1.3 2.6-2.8 2.8l-.1 1.1h7.3l7 7.5l.1-.1c1.8-.1 2.6-.6 2.6-1.6 0-.8-.6-1.3-1.6-1.3-.9 0-1.6.4-2.3 1.1l4.7 4.5c.8-.9 1.9-1.6 3.4-1.6 1.9.1 3.2 1.2 3.2 3z">
+                                                                                        </path>
+                                                                                    </svg></span></span></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="_1qy6ue6a" role="cell"><span translate="yes"
+                                                                    class="_19gi7yt0 _19gi7ytd _1fragem1h _19gi7yt7 notranslate">beregnet
+                                                                    ved næste trin</span></div>
+                                                        </div>
+                                                        <div class="_1fragem14 _1fragema3">
+                                                            <div class="_16s97g711"></div>
+                                                            <div role="separator"
+                                                                class="_1fragema3 mg7oix1 mg7oix5 _1fragem30 mg7oixc">
+                                                            </div>
+                                                            <div class="_16s97g711"></div>
+                                                        </div>
+                                                        <div class="_1x41w3p1 _1fragem1a _1fragem4 _1x41w3p8"
+                                                            role="row">
+                                                            <div class="_1x41w3p9" role="cell"><span
+                                                                    class="_19gi7yt0 _19gi7yth _1fragem1j _19gi7yt1 _19gi7yt8">i
+                                                                    alt</span>
+                                                                <p
+                                                                    class="_1x52f9s1 _1fragema3 _1x52f9sk _1fragem1h _1x52f9sf">
+                                                                    inklusiv 230,00 kr. i afgifter</p>
+                                                            </div>
+                                                            <div class="_1x41w3pa" role="cell">
+                                                                <div class="_1fragem16 _1fragema3 _1fragem34">
+                                                                    <div
+                                                                        class="_5uqybw2 _1fragem16 _1fragem9f _1fragem1q _1fragem26 _1fragem3 _1fragem34">
+                                                                        <abbr translate="yes"
+                                                                            class="_19gi7yt0 _19gi7ytd _1fragem1h _1...ot;:"anywalletpaymentmethod"},"__typename":"paymentline"},{"paymentmethod":{"__typename":"anyoffsitepaymentmethod","availableoffsiteproviders":[{"__typename":"offsiteprovider","paymentmethodidentifier":"86da9b0fedef80b17da4c2711297ce58","name":"quickpay","paymentbrands":["visa","visaelectron","master","dankort","mobilepay","diners_club"],"orderingindex":3}]},"__typename":"paymentline"},{"paymentmethod":{"__typename":"anyoffsitepaymentmethod","availableoffsiteproviders":[{"__typename":"offsiteprovider","paymentmethodidentifier":"b359c1163dba68dd4dcfce1ce170cb80","name":"mobilepay","paymentbrands":["mobilepay"],"orderingindex":4}]},"__typename":"paymentline"}],"paymentlines":[],"billingaddress":null,"paymentflexibilitypaymenttermstemplate":null,"__typename":"filledpaymentterms"},"merchandise":{"taxesincluded":true,"merchandiselines":[{"stableid":"e1414c7d-69bf-4e32-8e8d-12c4fc944cc1","merchandise":{"__typename":"contextualizedproductvariantmerchandise","id":"gid://shopify/productvariantmerchandise/41233551163543","digest":"590de5ed60048633f65d5ff7e1d06d8d","variantid":"gid://shopify/productvariant/41233551163543","title":"escentric molecules escentric 01 eau de toilette - 100 ml","subtitle":null,"sku":"333001","price":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"product":{"id":"gid://shopify/product/7229855498391","vendor":"nord brands","producttype":"","__typename":"product"},"image":{"alttext":null,"one":"https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_escentric01_64x64.jpg?v=1661420115","two":"https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_escentric01_128x128.jpg?v=1661420115","four":"https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_escentric01_256x256.jpg?v=1661420115","__typename":"image"},"properties":[],"requiresshipping":true,"options":[{"name":"title","value":"default title","__typename":"productvariantoption"}],"sellingplan":null,"giftcard":false,"deferredamount":{"amount":"0.0","currencycode":"dkk","__typename":"money"}},"quantity":{"items":{"value":1,"__typename":"intvalueconstraint"},"__typename":"proposalmerchandisequantitybyitem"},"totalamount":{"value":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"__typename":"moneyvalueconstraint"},"recurringtotal":null,"lineallocations":[{"stableid":"f10f82046f933ef2f5c281c41f7a0843","quantity":1,"totalamountbeforereductions":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"totalamountafterdiscounts":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"totalamountafterlinediscounts":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"checkoutpriceafterdiscounts":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"checkoutpricebeforereductions":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"unitprice":null,"allocations":[{"__typename":"linecomponenttaxallocation"}],"__typename":"lineallocation"}],"linecomponents":[],"__typename":"merchandiseline"}],"__typename":"filledmerchandiseterms"},"note":{"customattributes":[],"message":"","__typename":"note"},"scriptfingerprint":null,"transformerfingerprintv2":null,"buyeridentity":{"buyeridentity":{"presentmentcurrency":"dkk","countrycode":null,"__typename":"guestprofile"},"contactinfov2":null,"marketingconsent":[],"shoppayoptinphone":null,"__typename":"filledbuyeridentityterms"},"recurringtotals":[],"subtotalbeforetaxesandshipping":{"value":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"__typename":"moneyvalueconstraint"},"runningtotal":{"value":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"__typename":"moneyvalueconstraint"},"total":{"__typename":"anyconstraint"},"checkouttotalbeforetaxesandshipping":null,"checkouttotaltaxes":null,"checkouttotal":{"__typename":"anyconstraint"},"deferredtotal":null,"hasonlydeferredshipping":false,"subtotalbeforereductions":{"value":{"amount":"1150.0","currencycode":"dkk","__typename":"money"},"__typename":"moneyvalueconstraint"},"duty":{"totaldutyamount":null,"totaltaxanddutyamount":null,"__typename":"filleddutyterms"},"tax":{"totaltaxamount":null,"totaltaxanddutyamount":null,"totalamountincludedintarget":{"value":{"amount":"230.0","currencycode":"dkk","__typename":"money"},"__typename":"moneyvalueconstraint"},"exemptions":[],"__typename":"filledtaxterms"},"tip":{"tipsuggestions":[{"__typename":"tipsuggestion","percentage":0.15,"amount":{"value":{"amount":"172.5","currencycode":"dkk","__typename":"money"},"__typename":"moneyvalueconstraint"}},{"__typename":"tipsuggestion","percentage":0.18,"amount":{"value":{"amount":"207.0","currencycode":"dkk","__typename":"money"},"__typename":"moneyvalueconstraint"}},{"__typename":"tipsuggestion","percentage":0.2,"amount":{"value":{"amount":"230.0","currencycode":"dkk","__typename":"money"},"__typename":"moneyvalueconstraint"}},{"__typename":"tipsuggestion","percentage":0.0,"amount":{"value":{"amount":"0.0","currencycode":"dkk","__typename":"money"},"__typename":"moneyvalueconstraint"}}],"terms":{"__typename":"unavailableterms"},"__typename":"tipwrapper"},"localizationextension":{"fields":[],"__typename":"localizationextension"},"landedcostdetails":{"incoterminformation":null,"__typename":"landedcostdetails"},"nonnegotiableterms":null,"optionalduties":{"buyerrefusesduties":false,"refusedutiespermitted":false,"__typename":"optionalduties"},"attribution":{"attributions":[],"__typename":"attribution"},"managedbymarketspro":false,"captcha":null,"__typename":"proposal"},"__typename":"negotiationresultavailable"},"errors":[{"code":"buyer_identity_missing_contact_method","localizedmessage":"mangler en gyldig kontaktmetode.","nonlocalizedmessage":"missing a valid contact method.","localizedmessagehtml":"mangler en gyldig kontaktmetode.","target":"$.buyeridentity","__typename":"unprocessabletermviolation"},{"code":"tax_new_tax_must_be_accepted","localizedmessage":"","nonlocalizedmessage":"a new tax line in the seller proposal must be accepted in order to continue.","localizedmessagehtml":null,"target":"$","__typename":"acceptnewtermviolation"},{"code":"payments_unacceptable_payment_amount","localizedmessage":"din betaling kunne ikke behandles, fordi din ordretotal er ændret. tjek din ordretotal, og prøv igen.","nonlocalizedmessage":"the sum of proposed payments cannot cover the total amount to be paid.","localizedmessagehtml":"din betaling kunne ikke behandles, fordi din ordretotal er ændret. tjek din ordretotal, og prøv igen.","target":"$.payment","__typename":"unprocessabletermviolation"}],"__typename":"negotiationresultpayload"},"__typename":"session"}}}">
+                                                                    </div>
+                                                                    <div data-serialized-id="public-path"
+                                                                        data-serialized-value=""https:\\/\\/cdn.shopify.com\\/shopifycloud\\/checkout-web\\/assets\\/"">
+                                                                    </div>
+                                                                    <div data-serialized-id="cart-token"
+                                                                        data-serialized-value=""3de47d73bbab22a26d98b615d10b848e"">
+                                                                    </div>
+                                                                    <div data-serialized-id="api-client-id"
+                                                                        data-serialized-value="580111"></div>
+                                                                    <div data-serialized-id="source-token"
+                                                                        data-serialized-value=""3de47d73bbab22a26d98b615d10b848e"">
+                                                                    </div>
+                                                                    <div data-serialized-id="checkout-session-identifier"
+                                                                        data-serialized-value=""4e668c94ea46de6bb4d7eb7eba617e6e"">
+                                                                    </div>
+                                                                    <div data-serialized-id="session-token"
+                                                                        data-serialized-value=""nw50rldsdehzmglyrhflcmrkqlhqwisyetjdm1dtndnqzeuwykxjeueyd1d3bgptd3fnn290cfhzm1vlmmczcly1rghoukzct1v4zzlmynq2n2l6oeywrknnnezjcezmdellru1ed2tozllqehhavepkauzjovd3rvrvylfutwlqtzi3twrtbfb0rho4wjbrauzbbklhylvzr3bhcdhtnwlqnkhib1zxc2i5mkfzy1lkehy0dstqshhfnnlvrwjfc0l6nlzgofjvzfljehuzsxu5s2vrczyrsnplntjcy0vjsy9wuud4tc82bgftwkhlmgdmelhjbklwtnhgz003k3l1z2zyqt09ls1etnfxrmvnt0lknunvrkk2ls1rsdznevzyt29pam9oyxlychcvngxnpt0"">
+                                                                    </div>
+                                                                    <div data-serialized-id="session-finished"
+                                                                        data-serialized-value="false"></div>
+                                                                    <div data-serialized-id="receipt"
+                                                                        data-serialized-value="{"exists":false,"status":null,"in_progress":null}">
+                                                                    </div>
+                                                                    <div data-serialized-id="bugsnag-config"
+                                                                        data-serialized-value="{"apikey":"d194d16e5af0f76897128b2df7483be8","endpoint":"https:\\/\\/notify.bugsnag.com","shopid":57156829335,"shopname":"nord brands","shopdomain":"nord-brands.myshopify.com"}">
+                                                                    </div>
+                                                                    <div data-serialized-id="shop-pay-config"
+                                                                        data-serialized-value="{"redirect_url":"zmnzdezdu2t3svpun1jvwdnhvlvvwhy4b01oq1njmi9ezkdrbzbqdgx6d2n5sm90ne9vn1dnl2huadv6d0hbthznszhdanrjs1lpz2y1tljwvucroddby3fpqwr4qjrenvf4dlmxl0y4n3rorlv3t2nrme5ommp3wni3rk50ow1vwuy0tkpsowkznxrsc3bnwfcyahfhvnnwwgljc3l1nys4ovvqu2xfdys4eteycgrmuwdiwjhnaupuduhnvwjdzmxkvkxkq3mwtgxtak9vzenxnvpuq1pjz0zxcuzbb0p5ac9rqvlkagfymmpnvmnxu01zvjngbet0y0l6wgo2eedlws81wnb3y3rkatk4cut2n25otdj2tfarm29hszuxnlbiyxfnzuhouvhdzmpnz1q0cmf3cvpuuvhpu2vfnvb3dmiymvbrrgzjnu45bmu4rxu5aei1unpmdmzzcldwamm4rvoxeu4wrlroy1zxdk5czlnhduzzy2vxn2fqq1i2zlnkdm1nuwvtlzayzlbnukdvm0henfvxtutrzwgxwki3ynarnnvwqs9duuewve5ueju2v3rimzbhblfhum9kk3lhv1farddfk0xycdztdwpdcu9pz2r4ofjucy9zbxllrzvucejzuwzjest3axrsm1q3l0prvwm3sfjtutg3avjxd1pzbgxwa1m3tfq2smlsuwxsk3hmewtnt3lbl084t1gvz0uvrudrajzumlbauehvbkmxtwfks1dlrwl5zhdiewh0nejca2zwv2g0zhrirmpzouzzrfnvrmfzcenums8yvwqzovgwde4znkxezvjedexoa0uymhbdtnfkv3rwnu9zwkt6bxnqnhpdcm5rckhkbldmzvfinu5vuhfvnxlvtvjrqlroby9ydzhnykj4vi9vbm5nuex6n2q5l1b6yzl1tvh2nnnyqtrlovuywgtuyte2d1lncfu2ck80yzzsdva3nhblu1rluejur0fxaehnueovu1a5nmhvrctqow5takfrsgrangdozxiwbtrvrk9xwulmqktdutgyyws0uediaey4k0w2rhp3rjffrevon21bykfjtnc5rcs0vlc2rk1jmu10zmthdepiatnjrytmofrpvxc2zkfub05cr0g3efzpaulfcxo1vgj6tk5rrzjoyzerelnotwi1ck9ituntsta5mtneahfaa2oydfvyqm5yaezgnwo0t2lwz1vhbfdirfjuc3nyte80atrmyvjywddvz1zvrjbkstg2snzakzdstwntawddz21pcznwc1loqklqzkxkafn0wlp3evlrmit3sysyr2ducwjkym1tqnryqlh0vnlite1lv0g0tfp0yvlucu5ktglqdeltr0r0ywdyohlvz3zyq2zhc0rndhlkz3duu0nyuwxgedvyotjyqxboaurpritcngphcmpea24vedvzr0rzrgxldvfzmfoxl21mmxrlq2xuq0vdmxbywlc4ckrkyzvvtzfdrjjkverbtwrzy0lyskm1mnz6zxpey0robva2y0nqrvzey29qncthbgdhzjbocxnkbmk1ttbprdrjyni2cvhkz3yzemntm2pgvhury0zmzetrbdzzrmz4nezhmgy5dnnzczl6svrrrhevcut3ztfsly8zmm9zallsrvprbdliduhssgfumnhzuhfnugjnck5bnhn3zw1gefjbvujkzss0afg2yw1tveltqzuytnnzs0hjd0novkf6netus0rjcuhbnvexcvndume4r0v6uxbat2ywotl4m2s1auzjmkhgdw16k0furdfedg0xvmhjnwlsvgvjandvskzwdtftmxdiu29lrlg0zvv5q1lyc3znb3fyzhvfaeizzkhmdznftc93k0v0bhlbl29utxbsuejfrxfmukwxouzqds9uz2r3slfhodhheldtl2krqktydjnyq2ctlw1wummzt0tukytkcmlsrstsqly2rhc9pq==--4cecb8254f3527a4af1c3757f5952eeea5a3ca77","iframe_token":"ai92otkvyjl5vw9udhbjt2rswunsq0lul2xka09pt3iyr3dlsjzmlzzbvt0tlvdyrfhqtnfzrhm3wffsqlzjc3b0egc9pq==--0c0920eb0cd285d16a5f6bc1d54a7a2b7057cd09","transaction_params":"encrypted_params=d2qvaha4shpxwnfzsxptbu9qwjn4nvmxduwvnklxztm1vk4xl1jvk2v2tmzeswnsri8zalljcunkdentsudwnzbtajrzc3nhaxvlb3nhy0tgzndts0e9ps0tnctqmfd3mgvel2t3mlhxctvlmjfhqt09--57e2996afa9e634219258253fe54c6604f4f1f19","checkout_as_guest_url":"https:\\/\\/nordbrands.dk\\/checkouts\\/c\\/3de47d73bbab22a26d98b615d10b848e?locale=da-dk\\u0026shop_pay_logout=true\\u0026skip_shop_pay=true","callback_token":"eyjhbgcioijiuzi1nij9.eyjpc3mioijub3jklwjyyw5kcy5texnob3bpznkuy29tiiwiyxvkijpbim5vcmqtynjhbmrzlm15c2hvcglmes5jb20ilcjzag9wlmfwccjdlcjuymyioje2nzkwntuwmzysinnlc3npb25fdg9rzw4ioijovzuwumxkc2rfafpnr2xzukhgbgntuktrbghxv2lzewvuskrnmwrutkrouvpfvxdza3hkzvvfewqxzdnir3b0zdngtk4yotbjrmhattfwbe1ty3pjbfkxukdot1vrwknumvy0wnpsbvluutjommw2t0vzd1jrtk5orvpqy0vabwrfbexsvtffzdj0t1psbhflsghhvkvwa2fvwmppvmqzulzsdllsrnvuv2xxvhpjm1rxunrirkiwukhvnfdqqljhvvpcymtssflsvlpsm0joy0rode5xbffoa2hjyjfawgmystvna0z6wtfsa2viwtbku3rru0hork5ubhzsv0pgyzbsnk5swkdprkpwwkzsamvivxptwfu1uzjwumn6wxjtbnbmtlrkq1kwvkptetl3vvvknfrdodjir0zuv2tobe1hze1lbghqymtsd1ruaedamdazsznsmvoywllrvda5tfmxrvrurnhsbvzovdbss05vtlzsa2sytfmxclnewm5lvlpzvdi5ugftow9zwgx5y0hjdk5heg5qvdailcjzzxnzaw9ux2n1c3rvbwvyx2lkijpudwxslcjzdg9yzwzyb250x2rpz2vzdci6bnvsbcwizxhwijoxnjc5mdc2njm2fq.tdx6d2i-q5ubl9ymnygorddrix54hen1frjumuno97a","tracking_unique":"7f867be2-2d34-46da-b7fd-1e218a41e718","tracking_visit":"f2d6f3bd-f561-448f-a0cb-d5a45b2b7ad9","branded_button_login_passkeys_enabled":true,"web_url":"https:\\/\\/nordbrands.dk\\/checkouts\\/c\\/3de47d73bbab22a26d98b615d10b848e?locale=da-dk\\u0026shop_pay_logout=true\\u0026skip_shop_pay=true"}">
+                                                                    </div>
+                                                                    <div data-serialized-id="metrics-config"
+                                                                        data-serialized-value=""https:\\/\\/c1-stats.shopifysvc.com\\/performance"">
+                                                                    </div>
+                                                                    <div data-serialized-id="custom-metrics-endpoint"
+                                                                        data-serialized-value=""https:\\/\\/c1-stats.shopifysvc.com\\/custom-metrics"">
+                                                                    </div>
+                                                                    <div data-serialized-id="hosted-fields-url"
+                                                                        data-serialized-value=""https:\\/\\/checkout.shopifycs.com\\/dist\\/card_fields.js"">
+                                                                    </div>
+                                                                    <div data-serialized-id="graphql-endpoint"
+                                                                        data-serialized-value=""https:\\/\\/nordbrands.dk\\/checkouts\\/unstable\\/graphql"">
+                                                                    </div>
+                                                                    <div data-serialized-id="post-purchase-changesets-endpoint"
+                                                                        data-serialized-value=""https:\\/\\/nordbrands.dk\\/checkouts\\/unstable\\/changesets"">
+                                                                    </div>
+                                                                    <div data-serialized-id="post-purchase-metrics-endpoint"
+                                                                        data-serialized-value=""https:\\/\\/nordbrands.dk\\/checkouts\\/unstable\\/post_purchase_metrics\\/metric.json"">
+                                                                    </div>
+                                                                    <div data-serialized-id="queue-token"
+                                                                        data-serialized-value=""asgfd9hhfzckmm2llnfltzmorqpojc3n892mvsronjpiiluhdqvpbudyodouqupqwoe6xbjrdi7kpbdd6z_cuqa5daqmna4rdq93axkxjqu8-xubt-55swedlyzwvkarptc7zqjrahilrkqqkzntbhbuvikd0je2v-vdthyv8oceos8cocprcuc="">
+                                                                    </div>
+                                                                    <div data-serialized-id="checkpoint-data"
+                                                                        data-serialized-value="null"></div>
+                                                                    <div data-serialized-id="shopify-checkout-api-token"
+                                                                        data-serialized-value=""ogi5ndixmzc3ytg0owy2zjkzodjhnzvjy2fkntqwzjg6\"">
+                                                                    </div>
+                                                                    <div data-serialized-id="autocomplete-sandbox"
+                                                                        data-serialized-value=""https:\\/\\/checkout.shopify.com\\/57156829335\\/sandbox\\/checkout_one_web_autocomplete"">
+                                                                    </div>
+                                                                    <div data-serialized-id="analytics-iframe-url"
+                                                                        data-serialized-value=""https:\\/\\/nordbrands.dk\\/57156829335\\/checkouts\\/checkout_one_web_analytics"">
+                                                                    </div>
+                                                                    <div data-serialized-id="additional-google-analytics-script-sandbox"
+                                                                        data-serialized-value=""https:\\/\\/checkout.shopify.com\\/57156829335\\/sandbox\\/checkout_one_web_additional_google_analytics_script"">
+                                                                    </div>
+                                                                    <div data-serialized-id="locale"
+                                                                        data-serialized-value=""da-dk""></div>
+                                                                    <div data-serialized-id="deploy-stage"
+                                                                        data-serialized-value=""production"">
+                                                                    </div>
+                                                                    <div data-serialized-id="request-id"
+                                                                        data-serialized-value=""ef87c240-aad5-4e0c-8f86-aac985d4e505"">
+                                                                    </div>
+                                                                    <div data-serialized-id="login-url"
+                                                                        data-serialized-value=""https:\\/\\/nordbrands.dk\\/account\\/login?checkout_url=%2fcheckouts%2fc%2f3de47d73bbab22a26d98b615d10b848e"">
+                                                                    </div>
+                                                                    <div data-serialized-id="logout-url"
+                                                                        data-serialized-value=""https:\\/\\/nordbrands.dk\\/account\\/logout?return_url=https%3a%2f%2fnordbrands.dk%2fcheckouts%2fc%2f3de47d73bbab22a26d98b615d10b848e"">
+                                                                    </div>
+                                                                    <div data-serialized-id="internal-link-origins"
+                                                                        data-serialized-value="["https:\\/\\/shop.app","https:\\/\\/nordbrands.dk","https:\\/\\/shopify.com"]">
+                                                                    </div>
+                                                                    <div data-serialized-id="frontend-parallel-queries"
+                                                                        data-serialized-value="false"></div>
+                                                                    <div data-serialized-id="cacheable-queries-enabled"
+                                                                        data-serialized-value="true"></div>
+                                                                    <div data-serialized-id="checkout-sms-checkbox-experiment"
+                                                                        data-serialized-value=""""></div>
+                                                                    <div data-serialized-id="discount-discoverability-experiment-aa"
+                                                                        data-serialized-value=""""></div>
+                                                                    <div data-serialized-id="discount-discoverability-experiment"
+                                                                        data-serialized-value=""""></div>
+                                                                    <div data-serialized-id="shop-pay-tipping-experiment"
+                                                                        data-serialized-value=""""></div>
+                                                                    <div data-serialized-id="redesign-enabled"
+                                                                        data-serialized-value="false"></div>
+                                                                    <div data-serialized-id="http-request-info"
+                                                                        data-serialized-value="{"geolocation":{"coordinates":{"latitude":31.582600000000014,"longitude":74.32759999999999},"country_code":"pk","zone_code":"04"}}">
+                                                                    </div>
+                                                                    <div data-serialized-id="default-shipping-details"
+                                                                        data-serialized-value="{"country":{"code":"dk"},"zone":{"code":null}}">
+                                                                    </div>
+                                                                    <link
+                                                                        href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui-packages_checkout-web-ui_src_styles_global_css_ts-packages_checkout-web-ui_sr-591a0f.latest.da.bbcce05158951dc751f9.css"
+                                                                        crossorigin="anonymous" rel="stylesheet">
+                                                                    <link
+                                                                        href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors-node_modules_bugsnag_js_browser_notifier_js-node_modules_shopify_checkout-telemetry-a-38c8d5.latest.da.309c1efd4202d001160f.css"
+                                                                        crossorigin="anonymous" rel="stylesheet">
+                                                                    <link
+                                                                        href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.da.7f862f1f2eca46cbffb9.css"
+                                                                        crossorigin="anonymous" rel="stylesheet">
+                                                                    <link
+                                                                        href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/information.latest.da.da7479041a34c9463c32.css"
+                                                                        crossorigin="anonymous" rel="stylesheet">
+
+                                                                    <script
+                                                                        src="https://cdn.shopify.com/shopifycloud/exp-verdict/js/latest.js"></script>
+                                                                    <script async="true"
+                                                                        src="https://cdn.shopify.com/b5dd7309bw0a4825d1pb4247666mb80b6589m.js"></script>
+                                                                    <div id="webpixelsmanagersandboxcontainer"><iframe
+                                                                            src="https://nordbrands.dk/wpm@0.0.255@5dd7309bw0a4825d1pb4247666mb80b6589/sandbox/checkouts/c/3de47d73bbab22a26d98b615d10b848e/information"
+                                                                            id="web-pixel-sandbox-custom-shopify-custom-pixel-lax"
+                                                                            name="web-pixel-sandbox-custom-shopify-custom-pixel-lax"
+                                                                            sandbox="allow-scripts allow-forms"
+                                                                            tabindex="-1" aria-hidden="true"
+                                                                            style="display:none; height:0; width:0; visibility: hidden;"></iframe>
+                                                                    </div>
+                                                                    <script
+                                                                        src="https://pay.google.com/gp/p/js/pay.js"></script>
+                                                                    <iframe
+                                                                        src="https://pay.google.com/gp/p/ui/payframe?origin=https%3a%2f%2fnordbrands.dk&amp;mid="
+                                                                        height="0" width="0" allowpaymentrequest="true"
+                                                                        style="display: none; visibility: hidden;"></iframe>
+</body>
+
+</html>

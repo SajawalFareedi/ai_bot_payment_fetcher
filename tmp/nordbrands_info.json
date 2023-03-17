@@ -1,0 +1,918 @@
+{
+    "67c16dc457722caed6cf1ea83832a81f73ab773d72ef8dd13191ad11b68ca7cd{\"sessionToken\":\"\"}": {
+        "siberia": false,
+        "shop": {
+            "name": "Nord Brands",
+            "id": "gid://shopify/Shop/57156829335",
+            "merchantPolicies": [
+                {
+                    "handle": "refund-policy",
+                    "url": "https://nordbrands.dk/57156829335/policies/refund-policy.html?locale=da-DK",
+                    "__typename": "MerchantPolicy"
+                },
+                {
+                    "handle": "shipping-policy",
+                    "url": "https://nordbrands.dk/57156829335/policies/shipping-policy.html?locale=da-DK",
+                    "__typename": "MerchantPolicy"
+                },
+                {
+                    "handle": "privacy-policy",
+                    "url": "https://nordbrands.dk/57156829335/policies/privacy-policy.html?locale=da-DK",
+                    "__typename": "MerchantPolicy"
+                },
+                {
+                    "handle": "terms-of-service",
+                    "url": "https://nordbrands.dk/57156829335/policies/terms-of-service.html?locale=da-DK",
+                    "__typename": "MerchantPolicy"
+                }
+            ],
+            "country": {
+                "code": "DK",
+                "name": "Danmark",
+                "localizationKeys": {
+                    "address2": null,
+                    "postalCode": null,
+                    "zone": "region_label",
+                    "__typename": "AddressLocalizationKeys"
+                },
+                "labels": {
+                    "firstName": "Fornavn",
+                    "lastName": "Efternavn",
+                    "company": "Firma",
+                    "address1": "Gade og husnummer",
+                    "address2": "Lejlighed, etage osv.",
+                    "city": "By",
+                    "country": "Land/område",
+                    "zone": "Egn",
+                    "postalCode": "Postnummer",
+                    "phone": "Telefon",
+                    "__typename": "AddressLabels"
+                },
+                "zones": [],
+                "formatting": {
+                    "edit": "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{zip}{city}_{phone}",
+                    "show": "{firstName} {lastName}_{company}_{address1}_{address2}_{zip} {city}_{country}_{phone}",
+                    "__typename": "AddressFormat"
+                },
+                "autocompletionField": "ADDRESS1",
+                "buildingNumberRequired": true,
+                "buildingNumberMayBeInAddress2": false,
+                "pureNumericPostalCode": true,
+                "postalCodeRequired": true,
+                "__typename": "Country"
+            },
+            "popularBillingCountries": [
+                {
+                    "value": "DK",
+                    "label": "Danmark",
+                    "__typename": "Country"
+                }
+            ],
+            "popularShippingCountries": [],
+            "storefront": {
+                "url": "https://nordbrands.dk/",
+                "__typename": "CheckoutStorefrontConfig"
+            },
+            "theme": {
+                "id": "129711308951",
+                "cityhash": "4940088679187792487",
+                "__typename": "ThemeConfig"
+            },
+            "trackingPixels": [
+                {
+                    "pixelId": "2098877487096277",
+                    "pixelType": "FACEBOOK",
+                    "pixelConfig": null,
+                    "__typename": "TrackingPixel"
+                }
+            ],
+            "onlineStoreChat": null,
+            "facebookAppPixelId": "2098877487096277",
+            "facebookCapiEnabled": true,
+            "myshopifyDomain": "nord-brands.myshopify.com",
+            "translations": "{\"shop_policies\":{\"terms_of_service\":\"Handelsbetingelser\",\"privacy_policy\":\"Privatlivspolitik\"},\"marketing\":{\"sms\":{\"disclaimer\":{\"privacy_policy\":\"Privatlivspolitik\"}}},\"remember_me\":{\"privacy_policy\":\"Privatlivspolitik\"}}",
+            "analyticsAccount": "UA-82913866-1",
+            "enhancedEcommerceEnabled": true,
+            "customerAccountRequirement": "OPTIONAL",
+            "emailMarketing": "UNCHECKED",
+            "smsMarketing": "OFF",
+            "contactInfoOptions": [
+                "EMAIL"
+            ],
+            "orderUpdateSubscriptionEnabled": false,
+            "addressFormSettings": {
+                "address2": {
+                    "mode": "OPTIONAL",
+                    "__typename": "AddressFormField"
+                },
+                "company": {
+                    "mode": "OPTIONAL",
+                    "__typename": "AddressFormField"
+                },
+                "firstName": {
+                    "mode": "REQUIRED",
+                    "__typename": "AddressFormField"
+                },
+                "phone": {
+                    "mode": "REQUIRED",
+                    "__typename": "AddressFormField"
+                },
+                "addressAutocompletion": true,
+                "__typename": "AddressFormSettings"
+            },
+            "currencyCode": "DKK",
+            "timeZone": "Europe/Madrid",
+            "defaultShippingDetails": {
+                "country": {
+                    "code": "DK",
+                    "__typename": "Country"
+                },
+                "zone": null,
+                "__typename": "DefaultShippingDetails"
+            },
+            "checkoutChannelConfiguration": null,
+            "b2bEnabled": false,
+            "enabledBetas": [
+                "subscriptions_shop_pay_checkout_one",
+                "checkout_one_post_purchase_shop_pay",
+                "extensible_discounts",
+                "subscriptions_local_delivery_and_pickup",
+                "tax_finalization_and_payment_capture_after_checkout",
+                "checkout_one_negotiate_on_autocomplete",
+                "subscriptions_shipping_rates",
+                "trekkie_use_shop_domain_monorail_endpoint",
+                "web_pixels_use_shop_domain_monorail_endpoint",
+                "collect_private_access_tokens_in_checkout",
+                "redirect_to_checkout_web_thank_you_page",
+                "checkout_one_editor_shop_pay",
+                "web_pixels_use_hash_urls",
+                "b2b_mvp_vaulting",
+                "shop_pay_sticky_button_experiment",
+                "shop_pay_sticky_button_installments_experiment",
+                "shop_pay_sticky_button_subscription_experiment"
+            ],
+            "enabledDeliveryMethods": [
+                "SHIPPING"
+            ],
+            "giftCardsEnabled": false,
+            "discountCodesEnabled": true,
+            "contactEmail": "sales@nordbrands.dk",
+            "acceptTipPayments": false,
+            "showTipPayments": true,
+            "postPurchaseExtensionAvailable": false,
+            "postPurchaseDevelopmentModeAvailable": false,
+            "postPurchaseAdditionalTrackingScript": null,
+            "confirmationPageEnabled": false,
+            "additionalTrackingScript": null,
+            "additionalGoogleAnalyticsScript": "",
+            "customerAccountLocationsUrl": "https://shopify.com/57156829335/account/locations",
+            "loginLinkVisible": false,
+            "customerSettingsEnabled": true,
+            "shopPayEnabled": false,
+            "webPixelConfigurations": [
+                {
+                    "idTmp": "shopify-app-pixel",
+                    "configuration": "{}",
+                    "eventPayloadVersion": "v1",
+                    "runtimeContext": "STRICT",
+                    "scriptVersion": "0510",
+                    "type": "APP",
+                    "apiClientId": "shopify-pixel",
+                    "__typename": "WebPixelConfiguration"
+                },
+                {
+                    "idTmp": "shopify-custom-pixel",
+                    "configuration": null,
+                    "eventPayloadVersion": "v1",
+                    "runtimeContext": "LAX",
+                    "scriptVersion": "0510",
+                    "type": "CUSTOM",
+                    "apiClientId": "shopify-pixel",
+                    "__typename": "WebPixelConfiguration"
+                }
+            ],
+            "webPixelManagerVersion": "5dd7309bw0a4825d1pb4247666mb80b6589",
+            "linkToArriveApp": true,
+            "sameBillingAndShippingAddress": true,
+            "prefetchShippingRatesEnabled": true,
+            "__typename": "CheckoutShopConfig"
+        },
+        "httpRequestInfo": {
+            "geolocation": {
+                "country": {
+                    "code": "PK",
+                    "name": "Pakistan",
+                    "localizationKeys": {
+                        "address2": null,
+                        "postalCode": null,
+                        "zone": "region_label",
+                        "__typename": "AddressLocalizationKeys"
+                    },
+                    "labels": {
+                        "firstName": "Fornavn",
+                        "lastName": "Efternavn",
+                        "company": "Firma",
+                        "address1": "Adresse",
+                        "address2": "Lejlighed, etage osv.",
+                        "city": "By",
+                        "country": "Land/område",
+                        "zone": "Egn",
+                        "postalCode": "Postnummer",
+                        "phone": "Telefon",
+                        "__typename": "AddressLabels"
+                    },
+                    "zones": [],
+                    "formatting": {
+                        "edit": "{country}_{firstName}{lastName}_{company}_{address1}_{address2}_{city}{zip}_{phone}",
+                        "show": "{firstName} {lastName}_{company}_{address1}_{address2}_{city} {zip}_{country}_{phone}",
+                        "__typename": "AddressFormat"
+                    },
+                    "autocompletionField": "ADDRESS1",
+                    "buildingNumberRequired": false,
+                    "buildingNumberMayBeInAddress2": false,
+                    "pureNumericPostalCode": true,
+                    "postalCodeRequired": false,
+                    "__typename": "Country"
+                },
+                "zone": null,
+                "coordinates": {
+                    "latitude": 31.582600000000014,
+                    "longitude": 74.32759999999999,
+                    "__typename": "GeographicalCoordinates"
+                },
+                "__typename": "Geolocation"
+            },
+            "__typename": "HttpRequestInfo"
+        },
+        "checkoutProfile": null
+    },
+    "e38195e0bcfa8cb0111f502713707e6c389eece389ca6f6f0749227b20e64977{\"sessionToken\":\"\"}": {
+        "shop": {
+            "id": "gid://shopify/Shop/57156829335",
+            "designSystem": {
+                "colorPalette": {
+                    "canvas": {
+                        "background": "hsl(19.916, 0.0%, 100.0%)",
+                        "foreground": null,
+                        "accent": "hsl(19.916, 0.0%, 5.063%)",
+                        "__typename": "ColorGroup"
+                    },
+                    "primary": {
+                        "background": "hsl(19.916, 0.0%, 5.063%)",
+                        "foreground": null,
+                        "accent": null,
+                        "__typename": "ColorGroup"
+                    },
+                    "interactive": {
+                        "background": null,
+                        "foreground": "hsl(19.916, 0.0%, 5.063%)",
+                        "accent": null,
+                        "__typename": "ColorGroup"
+                    },
+                    "color1": {
+                        "background": "hsl(19.916, 0.0%, 100.0%)",
+                        "foreground": null,
+                        "accent": "hsl(19.916, 0.0%, 5.063%)",
+                        "__typename": "ColorGroup"
+                    },
+                    "color2": {
+                        "background": "hsl(18.435, 0.0%, 98.272%)",
+                        "foreground": null,
+                        "accent": "hsl(19.916, 0.0%, 5.063%)",
+                        "__typename": "ColorGroup"
+                    },
+                    "critical": {
+                        "background": null,
+                        "foreground": null,
+                        "accent": "hsl(12.177, 100.0%, 64.407%)",
+                        "__typename": "ColorGroup"
+                    },
+                    "surfacePrimary": {
+                        "background": "hsl(19.916, 0.0%, 100.0%)",
+                        "foreground": null,
+                        "accent": "hsl(19.916, 0.0%, 5.063%)",
+                        "__typename": "ColorGroup"
+                    },
+                    "surfaceSecondary": {
+                        "background": "hsl(18.435, 0.0%, 98.272%)",
+                        "foreground": null,
+                        "accent": "hsl(19.916, 0.0%, 5.063%)",
+                        "__typename": "ColorGroup"
+                    },
+                    "surfaceTertiary": {
+                        "background": null,
+                        "foreground": null,
+                        "accent": "hsl(19.916, 0.0%, 5.063%)",
+                        "__typename": "ColorGroup"
+                    },
+                    "primaryAction": {
+                        "background": "hsl(19.916, 0.0%, 5.063%)",
+                        "foreground": null,
+                        "accent": null,
+                        "__typename": "ColorGroup"
+                    },
+                    "__typename": "ColorPalette"
+                },
+                "typography": null,
+                "cornerRadius": null,
+                "__typename": "DesignSystem"
+            },
+            "customizations": null,
+            "__typename": "CheckoutShopConfig"
+        }
+    },
+    "fdcaca4148a6611e37a8e8e6d469767bb4cfd2e22be32798d4da8b2ef6611f67{\"sessionToken\":\"\"}": {
+        "shop": {
+            "id": "gid://shopify/Shop/57156829335",
+            "shippingCountries": [
+                {
+                    "value": "DK",
+                    "label": "Danmark",
+                    "__typename": "Country"
+                }
+            ],
+            "__typename": "CheckoutShopConfig"
+        }
+    },
+    "172d4094dc9c13c6d75712f53ec870ddb39c70c10b0538cb32cab847dd2c249f{\"checkpointData\":null,\"queueToken\":\"Asgfd9HhfZckMM2LlNfLTzmorqPoJC3N892MvSrOnJpIILUHdQVpBUDYodouQUpqwOE6xbJRdi7KPBDD6z_CuQA5daQmna4RdQ93aXKXjQU8-Xubt-55SWeDlYzwvKaRpTC7zQJRAHIlrKQqkZnTBHBUvIKD0Je2V-VdThyv8OcEOs8COCpRCuc=\",\"sessionToken\":\"NW50RldsdEhZMGlYRHFlcmRKQlhqWisyeTJDM1dTNDNQZEUwYkxJeUEyd1d3bGptd3FNN290cFhZM1VlMmczclY1RGhOUkZCT1V4ZzlmYnQ2N2l6OEYwRkNNNEZjcEZmdElLRU1Ed2tOZllqeHhaVEpkaUZjOVd3RVRvYlFuTWlqTzI3TWRtbFB0RHo4WjBRaUZBbklHYlVZR3BhcDhtNWlQNkhIb1ZXc2I5MkFzY1lkeHY0dStQSHhFNnlvRWJFc0l6NlZGOFJVZFljeHUzSXU5S2VRczYrSnpLNTJCY0VJSy9wUUd4TC82bGFTWkhlMGdMelhjbklwTnhGZ003K3l1Z2ZYQT09LS1ETnFxRmVNT0lKNUNVRkk2LS1rSDZneVZYT29Pam9oYXlycHcvNGxnPT0\"}": {
+        "session": {
+            "context": {
+                "session": [],
+                "policies": {
+                    "payment": [
+                        {
+                            "walletsAlreadyOffered": false,
+                            "__typename": "WalletsFact"
+                        }
+                    ],
+                    "buyerIdentity": [],
+                    "tax": [],
+                    "discount": [],
+                    "merchandise": [],
+                    "tip": [],
+                    "delivery": [],
+                    "__typename": "PolicyFactSet"
+                },
+                "__typename": "NegotiationContext"
+            },
+            "sessionType": "CART",
+            "sourceId": "3de47d73bbab22a26d98b615d10b848e",
+            "sourceVersion": "2",
+            "checkoutSessionIdentifier": "4e668c94ea46de6bb4d7eb7eba617e6e",
+            "storefrontAnalyticsStartedOrderEventId": null,
+            "negotiate": {
+                "result": {
+                    "queueToken": "AsRRtm3SsjXzAiPu6XPA0BHuFLCskmc1StzdKjoc1CtWcj_1ALrzxgtiCL77k5QzlzJEAkiOpkjt_qDyzqcBJldrn0WeylMyipH7YnwRO7revVAAPlNVEKKy9KCdnNxJccV9d37TTZxc2XJtR0TySwzzv0adDEq4dRPgaerre3J6JmjiCYHTAo0=",
+                    "buyerProposal": {
+                        "merchandiseDiscount": {
+                            "__typename": "FilledDiscountTerms",
+                            "lines": []
+                        },
+                        "deliveryDiscount": {
+                            "__typename": "FilledDiscountTerms",
+                            "lines": []
+                        },
+                        "delivery": {
+                            "__typename": "FilledDeliveryTerms",
+                            "intermediateRates": false,
+                            "progressiveRatesEstimatedTimeUntilCompletion": 0,
+                            "shippingRatesStatusToken": "",
+                            "deliveryLines": []
+                        },
+                        "merchandise": {
+                            "taxesIncluded": true,
+                            "merchandiseLines": [
+                                {
+                                    "stableId": "e1414c7d-69bf-4e32-8e8d-12c4fc944cc1",
+                                    "merchandise": {
+                                        "__typename": "ProductVariantMerchandise",
+                                        "id": "gid://shopify/ProductVariantMerchandise/41233551163543",
+                                        "digest": "590de5ed60048633f65d5ff7e1d06d8d",
+                                        "variantId": "gid://shopify/ProductVariant/41233551163543",
+                                        "title": "Escentric Molecules Escentric 01 Eau de Toilette - 100 ml",
+                                        "subtitle": null,
+                                        "product": {
+                                            "id": "gid://shopify/Product/7229855498391",
+                                            "vendor": "Nord Brands",
+                                            "productType": "",
+                                            "__typename": "Product"
+                                        },
+                                        "image": {
+                                            "altText": null,
+                                            "one": "https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_Escentric01_64x64.jpg?v=1661420115",
+                                            "two": "https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_Escentric01_128x128.jpg?v=1661420115",
+                                            "four": "https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_Escentric01_256x256.jpg?v=1661420115",
+                                            "__typename": "Image"
+                                        },
+                                        "properties": [],
+                                        "requiresShipping": true,
+                                        "options": [
+                                            {
+                                                "name": "Title",
+                                                "value": "Default Title",
+                                                "__typename": "ProductVariantOption"
+                                            }
+                                        ],
+                                        "sellingPlan": null,
+                                        "giftCard": false
+                                    },
+                                    "quantity": {
+                                        "items": {
+                                            "value": 1,
+                                            "__typename": "IntValueConstraint"
+                                        },
+                                        "__typename": "ProposalMerchandiseQuantityByItem"
+                                    },
+                                    "totalAmount": {
+                                        "value": {
+                                            "amount": "1150.0",
+                                            "currencyCode": "DKK",
+                                            "__typename": "Money"
+                                        },
+                                        "__typename": "MoneyValueConstraint"
+                                    },
+                                    "recurringTotal": null,
+                                    "lineAllocations": [
+                                        {
+                                            "stableId": "f10f82046f933ef2f5c281c41f7a0843",
+                                            "quantity": 1,
+                                            "totalAmountBeforeReductions": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "totalAmountAfterDiscounts": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "totalAmountAfterLineDiscounts": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "checkoutPriceAfterDiscounts": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "checkoutPriceBeforeReductions": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "unitPrice": null,
+                                            "allocations": [],
+                                            "__typename": "LineAllocation"
+                                        }
+                                    ],
+                                    "lineComponents": [],
+                                    "__typename": "MerchandiseLine"
+                                }
+                            ],
+                            "__typename": "FilledMerchandiseTerms"
+                        },
+                        "runningTotal": {
+                            "value": {
+                                "amount": "1150.0",
+                                "currencyCode": "DKK",
+                                "__typename": "Money"
+                            },
+                            "__typename": "MoneyValueConstraint"
+                        },
+                        "total": {
+                            "__typename": "AnyConstraint"
+                        },
+                        "checkoutTotalBeforeTaxesAndShipping": null,
+                        "checkoutTotalTaxes": null,
+                        "checkoutTotal": {
+                            "__typename": "AnyConstraint"
+                        },
+                        "deferredTotal": null,
+                        "hasOnlyDeferredShipping": false,
+                        "subtotalBeforeTaxesAndShipping": {
+                            "value": {
+                                "amount": "1150.0",
+                                "currencyCode": "DKK",
+                                "__typename": "Money"
+                            },
+                            "__typename": "MoneyValueConstraint"
+                        },
+                        "attribution": {
+                            "attributions": [],
+                            "__typename": "Attribution"
+                        },
+                        "__typename": "Proposal"
+                    },
+                    "sellerProposal": {
+                        "merchandiseDiscount": {
+                            "__typename": "FilledDiscountTerms",
+                            "lines": []
+                        },
+                        "deliveryDiscount": {
+                            "__typename": "FilledDiscountTerms",
+                            "lines": []
+                        },
+                        "delivery": {
+                            "__typename": "UnavailableTerms"
+                        },
+                        "payment": {
+                            "availablePayments": [
+                                {
+                                    "paymentMethod": {
+                                        "__typename": "AnyDirectPaymentMethod",
+                                        "availablePaymentProviders": [
+                                            {
+                                                "paymentMethodIdentifier": "f92a3cb8bebb2007e6f58ab8d120c747",
+                                                "name": "shopify_payments",
+                                                "brands": [
+                                                    "VISA",
+                                                    "MAESTRO",
+                                                    "MASTERCARD"
+                                                ],
+                                                "orderingIndex": 0,
+                                                "displayName": null,
+                                                "__typename": "PaymentProvider"
+                                            }
+                                        ]
+                                    },
+                                    "__typename": "PaymentLine"
+                                },
+                                {
+                                    "paymentMethod": {
+                                        "availableWalletPaymentConfigs": [
+                                            {
+                                                "__typename": "ApplePayWalletConfig",
+                                                "name": "APPLE_PAY",
+                                                "supportedNetworks": [
+                                                    "visa",
+                                                    "maestro",
+                                                    "masterCard"
+                                                ],
+                                                "walletAuthenticationToken": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMzODQifQ.eyJjaGVja291dF90b2tlbiI6IjRlNjY4Yzk0ZWE0NmRlNmJiNGQ3ZWI3ZWJhNjE3ZTZlIiwib3JkZXJfdHlwZV9pZCI6Im9yZGVyLmNvbS5zaG9waWZ5LnNob3AiLCJpc3MiOiJzaG9waWZ5IiwiaWF0IjoxNjc5MDU1MDM2LCJleHAiOjE2OTQ2MDcwMzZ9.ynSG8GKD0EnRnQdscMGvCK4y-nPeXU8dbiaEp07w9s_TzR5JZ8xmLkEknFUxcMQ9",
+                                                "walletOrderTypeIdentifier": "order.com.shopify.shop",
+                                                "walletServiceUrl": "https://wallet-order-service.shopifyapps.com",
+                                                "paymentMethodIdentifier": "e956a82146b18fe99f7ba945d4b45fee",
+                                                "orderingIndex": 1
+                                            },
+                                            {
+                                                "__typename": "GooglePayWalletConfig",
+                                                "name": "GOOGLE_PAY",
+                                                "allowedAuthMethods": [
+                                                    "PAN_ONLY",
+                                                    "CRYPTOGRAM_3DS"
+                                                ],
+                                                "allowedCardNetworks": [
+                                                    "VISA",
+                                                    "MASTERCARD"
+                                                ],
+                                                "gateway": "shopify",
+                                                "gatewayMerchantId": "57156829335",
+                                                "merchantId": "16708973830884969730",
+                                                "authJwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJtZXJjaGFudElkIjoiMTY3MDg5NzM4MzA4ODQ5Njk3MzAiLCJtZXJjaGFudE9yaWdpbiI6Im5vcmRicmFuZHMuZGsiLCJpYXQiOjE2NzkwNTUwMzZ9.Ia8uCmX6aWyVX3-v8zhZIAbRw3rsnk4oVNwY7QyAxpWOgr528_kFlCYY6rxTE1nk-m8kKuk-HCMFFz0HCWpJEw",
+                                                "environment": "PRODUCTION",
+                                                "paymentMethodIdentifier": "49baf14af39e06713736df7ae35985d9",
+                                                "orderingIndex": 2
+                                            }
+                                        ],
+                                        "__typename": "AnyWalletPaymentMethod"
+                                    },
+                                    "__typename": "PaymentLine"
+                                },
+                                {
+                                    "paymentMethod": {
+                                        "__typename": "AnyOffsitePaymentMethod",
+                                        "availableOffsiteProviders": [
+                                            {
+                                                "__typename": "OffsiteProvider",
+                                                "paymentMethodIdentifier": "86da9b0fedef80b17da4c2711297ce58",
+                                                "name": "Quickpay",
+                                                "paymentBrands": [
+                                                    "visa",
+                                                    "visaelectron",
+                                                    "master",
+                                                    "dankort",
+                                                    "mobilepay",
+                                                    "diners_club"
+                                                ],
+                                                "orderingIndex": 3
+                                            }
+                                        ]
+                                    },
+                                    "__typename": "PaymentLine"
+                                },
+                                {
+                                    "paymentMethod": {
+                                        "__typename": "AnyOffsitePaymentMethod",
+                                        "availableOffsiteProviders": [
+                                            {
+                                                "__typename": "OffsiteProvider",
+                                                "paymentMethodIdentifier": "b359c1163dba68dd4dcfce1ce170cb80",
+                                                "name": "Mobilepay",
+                                                "paymentBrands": [
+                                                    "mobilepay"
+                                                ],
+                                                "orderingIndex": 4
+                                            }
+                                        ]
+                                    },
+                                    "__typename": "PaymentLine"
+                                }
+                            ],
+                            "paymentLines": [],
+                            "billingAddress": null,
+                            "paymentFlexibilityPaymentTermsTemplate": null,
+                            "__typename": "FilledPaymentTerms"
+                        },
+                        "merchandise": {
+                            "taxesIncluded": true,
+                            "merchandiseLines": [
+                                {
+                                    "stableId": "e1414c7d-69bf-4e32-8e8d-12c4fc944cc1",
+                                    "merchandise": {
+                                        "__typename": "ContextualizedProductVariantMerchandise",
+                                        "id": "gid://shopify/ProductVariantMerchandise/41233551163543",
+                                        "digest": "590de5ed60048633f65d5ff7e1d06d8d",
+                                        "variantId": "gid://shopify/ProductVariant/41233551163543",
+                                        "title": "Escentric Molecules Escentric 01 Eau de Toilette - 100 ml",
+                                        "subtitle": null,
+                                        "sku": "333001",
+                                        "price": {
+                                            "amount": "1150.0",
+                                            "currencyCode": "DKK",
+                                            "__typename": "Money"
+                                        },
+                                        "product": {
+                                            "id": "gid://shopify/Product/7229855498391",
+                                            "vendor": "Nord Brands",
+                                            "productType": "",
+                                            "__typename": "Product"
+                                        },
+                                        "image": {
+                                            "altText": null,
+                                            "one": "https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_Escentric01_64x64.jpg?v=1661420115",
+                                            "two": "https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_Escentric01_128x128.jpg?v=1661420115",
+                                            "four": "https://cdn.shopify.com/s/files/1/0571/5682/9335/products/333001_Escentric01_256x256.jpg?v=1661420115",
+                                            "__typename": "Image"
+                                        },
+                                        "properties": [],
+                                        "requiresShipping": true,
+                                        "options": [
+                                            {
+                                                "name": "Title",
+                                                "value": "Default Title",
+                                                "__typename": "ProductVariantOption"
+                                            }
+                                        ],
+                                        "sellingPlan": null,
+                                        "giftCard": false,
+                                        "deferredAmount": {
+                                            "amount": "0.0",
+                                            "currencyCode": "DKK",
+                                            "__typename": "Money"
+                                        }
+                                    },
+                                    "quantity": {
+                                        "items": {
+                                            "value": 1,
+                                            "__typename": "IntValueConstraint"
+                                        },
+                                        "__typename": "ProposalMerchandiseQuantityByItem"
+                                    },
+                                    "totalAmount": {
+                                        "value": {
+                                            "amount": "1150.0",
+                                            "currencyCode": "DKK",
+                                            "__typename": "Money"
+                                        },
+                                        "__typename": "MoneyValueConstraint"
+                                    },
+                                    "recurringTotal": null,
+                                    "lineAllocations": [
+                                        {
+                                            "stableId": "f10f82046f933ef2f5c281c41f7a0843",
+                                            "quantity": 1,
+                                            "totalAmountBeforeReductions": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "totalAmountAfterDiscounts": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "totalAmountAfterLineDiscounts": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "checkoutPriceAfterDiscounts": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "checkoutPriceBeforeReductions": {
+                                                "amount": "1150.0",
+                                                "currencyCode": "DKK",
+                                                "__typename": "Money"
+                                            },
+                                            "unitPrice": null,
+                                            "allocations": [
+                                                {
+                                                    "__typename": "LineComponentTaxAllocation"
+                                                }
+                                            ],
+                                            "__typename": "LineAllocation"
+                                        }
+                                    ],
+                                    "lineComponents": [],
+                                    "__typename": "MerchandiseLine"
+                                }
+                            ],
+                            "__typename": "FilledMerchandiseTerms"
+                        },
+                        "note": {
+                            "customAttributes": [],
+                            "message": "",
+                            "__typename": "Note"
+                        },
+                        "scriptFingerprint": null,
+                        "transformerFingerprintV2": null,
+                        "buyerIdentity": {
+                            "buyerIdentity": {
+                                "presentmentCurrency": "DKK",
+                                "countryCode": null,
+                                "__typename": "GuestProfile"
+                            },
+                            "contactInfoV2": null,
+                            "marketingConsent": [],
+                            "shopPayOptInPhone": null,
+                            "__typename": "FilledBuyerIdentityTerms"
+                        },
+                        "recurringTotals": [],
+                        "subtotalBeforeTaxesAndShipping": {
+                            "value": {
+                                "amount": "1150.0",
+                                "currencyCode": "DKK",
+                                "__typename": "Money"
+                            },
+                            "__typename": "MoneyValueConstraint"
+                        },
+                        "runningTotal": {
+                            "value": {
+                                "amount": "1150.0",
+                                "currencyCode": "DKK",
+                                "__typename": "Money"
+                            },
+                            "__typename": "MoneyValueConstraint"
+                        },
+                        "total": {
+                            "__typename": "AnyConstraint"
+                        },
+                        "checkoutTotalBeforeTaxesAndShipping": null,
+                        "checkoutTotalTaxes": null,
+                        "checkoutTotal": {
+                            "__typename": "AnyConstraint"
+                        },
+                        "deferredTotal": null,
+                        "hasOnlyDeferredShipping": false,
+                        "subtotalBeforeReductions": {
+                            "value": {
+                                "amount": "1150.0",
+                                "currencyCode": "DKK",
+                                "__typename": "Money"
+                            },
+                            "__typename": "MoneyValueConstraint"
+                        },
+                        "duty": {
+                            "totalDutyAmount": null,
+                            "totalTaxAndDutyAmount": null,
+                            "__typename": "FilledDutyTerms"
+                        },
+                        "tax": {
+                            "totalTaxAmount": null,
+                            "totalTaxAndDutyAmount": null,
+                            "totalAmountIncludedInTarget": {
+                                "value": {
+                                    "amount": "230.0",
+                                    "currencyCode": "DKK",
+                                    "__typename": "Money"
+                                },
+                                "__typename": "MoneyValueConstraint"
+                            },
+                            "exemptions": [],
+                            "__typename": "FilledTaxTerms"
+                        },
+                        "tip": {
+                            "tipSuggestions": [
+                                {
+                                    "__typename": "TipSuggestion",
+                                    "percentage": 0.15,
+                                    "amount": {
+                                        "value": {
+                                            "amount": "172.5",
+                                            "currencyCode": "DKK",
+                                            "__typename": "Money"
+                                        },
+                                        "__typename": "MoneyValueConstraint"
+                                    }
+                                },
+                                {
+                                    "__typename": "TipSuggestion",
+                                    "percentage": 0.18,
+                                    "amount": {
+                                        "value": {
+                                            "amount": "207.0",
+                                            "currencyCode": "DKK",
+                                            "__typename": "Money"
+                                        },
+                                        "__typename": "MoneyValueConstraint"
+                                    }
+                                },
+                                {
+                                    "__typename": "TipSuggestion",
+                                    "percentage": 0.2,
+                                    "amount": {
+                                        "value": {
+                                            "amount": "230.0",
+                                            "currencyCode": "DKK",
+                                            "__typename": "Money"
+                                        },
+                                        "__typename": "MoneyValueConstraint"
+                                    }
+                                },
+                                {
+                                    "__typename": "TipSuggestion",
+                                    "percentage": 0.0,
+                                    "amount": {
+                                        "value": {
+                                            "amount": "0.0",
+                                            "currencyCode": "DKK",
+                                            "__typename": "Money"
+                                        },
+                                        "__typename": "MoneyValueConstraint"
+                                    }
+                                }
+                            ],
+                            "terms": {
+                                "__typename": "UnavailableTerms"
+                            },
+                            "__typename": "TipWrapper"
+                        },
+                        "localizationExtension": {
+                            "fields": [],
+                            "__typename": "LocalizationExtension"
+                        },
+                        "landedCostDetails": {
+                            "incotermInformation": null,
+                            "__typename": "LandedCostDetails"
+                        },
+                        "nonNegotiableTerms": null,
+                        "optionalDuties": {
+                            "buyerRefusesDuties": false,
+                            "refuseDutiesPermitted": false,
+                            "__typename": "OptionalDuties"
+                        },
+                        "attribution": {
+                            "attributions": [],
+                            "__typename": "Attribution"
+                        },
+                        "managedByMarketsPro": false,
+                        "captcha": null,
+                        "__typename": "Proposal"
+                    },
+                    "__typename": "NegotiationResultAvailable"
+                },
+                "errors": [
+                    {
+                        "code": "BUYER_IDENTITY_MISSING_CONTACT_METHOD",
+                        "localizedMessage": "Mangler en gyldig kontaktmetode.",
+                        "nonLocalizedMessage": "Missing a valid contact method.",
+                        "localizedMessageHtml": "Mangler en gyldig kontaktmetode.",
+                        "target": "$.buyerIdentity",
+                        "__typename": "UnprocessableTermViolation"
+                    },
+                    {
+                        "code": "TAX_NEW_TAX_MUST_BE_ACCEPTED",
+                        "localizedMessage": "",
+                        "nonLocalizedMessage": "A new tax line in the seller proposal must be accepted in order to continue.",
+                        "localizedMessageHtml": null,
+                        "target": "$",
+                        "__typename": "AcceptNewTermViolation"
+                    },
+                    {
+                        "code": "PAYMENTS_UNACCEPTABLE_PAYMENT_AMOUNT",
+                        "localizedMessage": "Din betaling kunne ikke behandles, fordi din ordretotal er ændret. Tjek din ordretotal, og prøv igen.",
+                        "nonLocalizedMessage": "The sum of proposed payments cannot cover the total amount to be paid.",
+                        "localizedMessageHtml": "Din betaling kunne ikke behandles, fordi din ordretotal er ændret. Tjek din ordretotal, og prøv igen.",
+                        "target": "$.payment",
+                        "__typename": "UnprocessableTermViolation"
+                    }
+                ],
+                "__typename": "NegotiationResultPayload"
+            },
+            "__typename": "Session"
+        }
+    }
+}
