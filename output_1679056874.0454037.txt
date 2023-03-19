@@ -1,0 +1,9 @@
+https://givingdeer.dk	:	quickpay
+https://danishendurance.com	:	shopify payments
+https://bygmax.dk	:	bambora
+https://enamelcopenhagen.dk	:	quickpay
+https://nordbrands.dk	:	shopify payments
+https://nyesokker.dk	:	reepay
+https://natruba.dk	:	shopify payments
+https://liberte.dk	:	shopify payments
+https://brand-art.dk	:	reepay
