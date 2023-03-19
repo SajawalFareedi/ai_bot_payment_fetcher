@@ -2,13 +2,8 @@ import re
 
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver import DesiredCapabilities
-# from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.remote.webdriver import By
-# from selenium.webdriver.remote.webelement import WebElement
-# from selenium.webdriver.support.wait import WebDriverWait
-# from selenium.webdriver.common.action_chains import ActionChains
 
-# import selenium.webdriver.support.expected_conditions as EC
 import undetected_chromedriver as uc
 
 from bs4 import BeautifulSoup as bs4
@@ -21,8 +16,9 @@ class PaymentProviderFetcher():
     def __init__(self):
         # open("payment_gateways.txt", encoding="utf8").read().strip().lower().split('\n')
         self.PAYMENT_GATEWAYS = ["Shipmondo Payments", "Shopify Payments", "Pensopay", "Clearhaus", "Quickpay", "Bambora", "Worldline",
-                                 "Reepay", "Valitor", "Freepay", "Adyen", "Farpay", "Lunar", "Nets", "Stripe", "Onpay", "Elevon", "Swiipe", "Paylike"]
-        self.WEBSITES = open("urls.txt", encoding="utf8").read().strip().lower().replace("\r", "").split("\n")
+                                 "Reepay", "Valitor", "Freepay", "Adyen", "Farpay", "Lunar", "payments.nets", "Stripe", "Onpay", "Elevon", "Swiipe", "Paylike", "Nets"]
+        self.WEBSITES = open("urls.txt", encoding="utf8").read(
+        ).strip().lower().replace("\r", "").split("\n")
         self.OUTPUT_FILE = open(f"output_{time()}.txt", "w+", encoding="utf8")
 
         self.headless = False
@@ -152,91 +148,157 @@ class PaymentProviderFetcher():
         return add_to_cart, x_path
 
     def get_cart_btn(self):
-        add_to_cart, x_path = None, None
+        add_to_cart, x_path, text = None, None, ""
 
         add_to_cart = self.get_element_by_xpath(
             "//*[starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]/*")
         x_path = "//*[starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]/*"
+        text = "tilføj til kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]"
-        
+            text = "tilføj til kurv"
+
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]/*"
-        
+                "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*")
+            x_path = "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*"
+            text = "læg i kurv"
+
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]"
+                "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']")
+            x_path = "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']"
+            text = "læg i kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]/*")
             x_path = "//*[starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]/*"
+            text = "læg i kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]"
+            text = "læg i kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]/*")
             x_path = "//*[starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]/*"
+            text = "add to cart"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]"
+            text = "add to cart"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]/*")
             x_path = "//*[starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]/*"
+            text = "add to basket"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]"
+            text = "add to basket"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]/*")
             x_path = "//*[starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]/*"
+            text = "tilføj til indkøbskurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]"
+            text = "tilføj til indkøbskurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]/*")
             x_path = "//*[starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]/*"
+            text = "føj til kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]"
+            text = "føj til kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]/*"
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]/*")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]/*"
+            text = "køb"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]"
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]"
+            text = "køb"
 
-        return add_to_cart, x_path
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]/*")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]/*"
+            text = "levering"
+
+        if not add_to_cart:
+            add_to_cart = self.get_element_by_xpath(
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]"
+            text = "levering"
+
+        return add_to_cart, x_path, text
 
     def custom_sort(self, url: str) -> bool:
         return url.startswith("/")
+    
+    def check_products(self, website: str, urls: list) -> bool:
+        for url in urls:
+            url = url.replace("www.", "")
+            if url.startswith("/"):
+                url = f"{website}{url}"
+
+            try:
+                self.driver.get(url)
+            except:
+                continue
+
+            sleep(1.2)
+
+            is_valid_page, xpath, text = self.get_cart_btn()
+
+            if is_valid_page:
+                try:
+                    if is_valid_page.tag_name != "i":
+                        t = is_valid_page.text.lower().strip()
+                        if t.startswith(text) and self.check_btn_clickable(xpath):
+                            return True
+
+                    if self.check_btn_clickable(xpath):
+                        return True
+
+                except:
+                    ...
+            else:
+                is_valid_page, xpath = self.get_cart_btn_2()
+
+                if is_valid_page:
+                    if self.check_btn_clickable(xpath):
+                        return True
+
+            sleep(randrange(2, 4))
+        
+        return False
 
     def find_product_on_main_page(self, website: str):
         html = self.driver.page_source
@@ -250,62 +312,31 @@ class PaymentProviderFetcher():
                 urls.append(u)
 
         urls = list(set(urls))
-        # urls.sort(key=len)
         urls.sort(key=self.custom_sort, reverse=True)
+        
+        _urls = list(filter(lambda x: x.find("product") != -1 or x.find("produkt") != -1, urls))
+        _urls.sort(key=self.custom_sort, reverse=True)
+        
+        if len(_urls) > 0:
+            s = self.check_products(website, _urls)
+            if not s:
+                self.check_products(website, urls)
+        else:
+            self.check_products(website, urls)
+        
 
-        for url in urls:
-            url = url.replace("www.", "")
-            # if url.find("product") != -1 or url.find("produkt") != -1 or url.find("categor") != -1 or url.find("kategori") != -1:
-            #     if url.startswith("/"):
-            #         url = f"{website}{url}"
-
-            #     self.driver.get(url)
-
-            #     is_valid_page, xpath = self.get_cart_btn()
-
-            #     if is_valid_page:
-            #         return
-            #     else:
-            #         is_valid_page, xpath = self.get_cart_btn_2()
-
-            #         if is_valid_page:
-            #             return
-
-            #     self.find_product_on_main_page(website)
-            # else:
-            # for _ in range(self.page_deepness):
-            if url.startswith("/"):
-                url = f"{website}{url}"
-
-            try:
-                self.driver.get(url)
-            except:
-                continue
-
-            is_valid_page, xpath = self.get_cart_btn()
-
-            if is_valid_page:
-                try:
-                    if len(is_valid_page.text) > 0:
-                        return
-                except:
-                    ...
-            else:
-                is_valid_page, xpath = self.get_cart_btn_2()
-
-                if is_valid_page:
-                    try:
-                        if len(is_valid_page.text) > 0:
-                            return
-                    except:
-                        ...
-
-            sleep(randrange(2, 4))
+    def check_btn_clickable(self, xpath: str) -> bool:
+        return self.driver.find_element(By.XPATH, xpath).is_enabled()
 
     def handle_sitemap(self, website: str):
         page_src = self.driver.page_source.lower()
-        urls = re.sub('<[^<]+>', "", page_src)
+        page_src = page_src.replace("&gt;", ">").replace("&lt;", "<")
+        
+        urls = re.sub('<[^<]+>', " ", page_src)
         urls = re.findall("(?P<url>https?://[^\s]+)", urls)
+        urls = list(set(urls))
+        
+        _urls = []
 
         for url in urls:
             url = url.replace("www.", "")
@@ -313,31 +344,38 @@ class PaymentProviderFetcher():
                 if url.lower().find(".jpg") != -1 or url.lower().find(".png") != -1 or url.lower().find(".jpeg") != -1 or url.lower().find(".svg") != -1:
                     continue
 
-                if url.lower().find("product") != -1 or url.find("produkt") != -1 or url.find("shop") != -1:
-                    self.driver.get(url)
-                    if url.lower().find("sitemap") != -1:
-                        self.handle_sitemap(website)
-                        return
-                    else:
-                        is_valid_page, xpath = self.get_cart_btn()
+                if url.lower().find("product") != -1 or url.find("produkt") != -1 or url.find("shop") != -1 or url.lower().find("sitemap") != -1:
+                    _urls.append(url)
 
-                        if is_valid_page:
-                            return
-                        else:
-                            is_valid_page, xpath = self.get_cart_btn_2()
+        for url in _urls:
+            if url.lower().find("product") != -1 or url.find("produkt") != -1 or url.find("shop") != -1:
+                self.driver.get(url)
+                sleep(1.2)
+                is_valid_page, xpath, text = self.get_cart_btn()
 
-                            if is_valid_page:
+                if is_valid_page:
+                    try:
+                        if is_valid_page.tag_name != "i":
+                            t = is_valid_page.text.lower().strip()
+                            if t.startswith(text) and self.check_btn_clickable(xpath):
                                 return
 
-                elif url.lower().find("sitemap") != -1:
-                    self.driver.get(url)
-                    sleep(1.2)
-                    self.handle_sitemap(website)
-                    return
-            sleep(1.2)
+                        if self.check_btn_clickable(xpath):
+                            return
+                    except:
+                        ...
+                else:
+                    is_valid_page, xpath = self.get_cart_btn_2()
 
-        # l_url = max(urls, key=len)
-        # self.driver.get(url)
+                    if is_valid_page:
+                        if self.check_btn_clickable(xpath):
+                            return
+            elif url.lower().find("sitemap") != -1:
+                self.driver.get(url)
+                sleep(1.2)
+                self.handle_sitemap(website)
+                return
+            sleep(1.2)
 
         self.driver.get(website)
         sleep(1.2)
@@ -391,7 +429,7 @@ class PaymentProviderFetcher():
             self.find_product_on_main_page(website)
 
     def add_product_to_cart(self) -> bool:
-        add_to_cart, xpath = self.get_cart_btn()
+        add_to_cart, xpath, text = self.get_cart_btn()
 
         # print(add_to_cart, xpath)
 
@@ -410,7 +448,7 @@ class PaymentProviderFetcher():
             return True
         else:
             add_to_cart, xpath = self.get_cart_btn_2()
-
+            # print(add_to_cart, xpath)
             if add_to_cart:
                 try:
                     self.click_using_xpath(xpath=xpath)
@@ -432,19 +470,20 @@ class PaymentProviderFetcher():
 
         btn, x_path = None, None
 
-        btn = self.get_element_by_xpath("//*[starts-with(translate(normalize-space(), 'gå til kassen', 'GÅ TIL KASSEN'),'GÅ TIL KASSEN')]/*")
+        btn = self.get_element_by_xpath(
+            "//*[starts-with(translate(normalize-space(), 'gå til kassen', 'GÅ TIL KASSEN'),'GÅ TIL KASSEN')]/*")
         x_path = "//*[starts-with(translate(normalize-space(), 'gå til kassen', 'GÅ TIL KASSEN'),'GÅ TIL KASSEN')]/*"
 
         if not btn:
             btn = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'gå til kassen', 'GÅ TIL KASSEN'),'GÅ TIL KASSEN')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'gå til kassen', 'GÅ TIL KASSEN'),'GÅ TIL KASSEN')]"
-            
+
         if not btn:
             btn = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'gå til checkout', 'GÅ TIL CHECKOUT'),'GÅ TIL CHECKOUT')]/*")
             x_path = "//*[starts-with(translate(normalize-space(), 'gå til checkout', 'GÅ TIL CHECKOUT'),'GÅ TIL CHECKOUT')]/*"
-        
+
         if not btn:
             btn = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'gå til checkout', 'GÅ TIL CHECKOUT'),'GÅ TIL CHECKOUT')]")
@@ -511,13 +550,15 @@ class PaymentProviderFetcher():
             btn = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'gå til bestilling', 'GÅ TIL BESTILLING'),'GÅ TIL BESTILLING')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'gå til bestilling', 'GÅ TIL BESTILLING'),'GÅ TIL BESTILLING')]"
-        
+
         if not btn:
-            btn = self.get_element_by_xpath("//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]/*")
+            btn = self.get_element_by_xpath(
+                "//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]/*")
             x_path = "//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]/*"
-        
+
         if not btn:
-            btn = self.get_element_by_xpath("//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]")
+            btn = self.get_element_by_xpath(
+                "//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]"
 
         if not btn:
@@ -529,7 +570,7 @@ class PaymentProviderFetcher():
             btn = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'fortsæt til kassen', 'FORTSÆT TIL KASSEN'),'FORTSÆT TIL KASSEN')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'fortsæt til kassen', 'FORTSÆT TIL KASSEN'),'FORTSÆT TIL KASSEN')]"
-            
+
         if not btn:
             btn = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'videre til levering', 'VIDERE TIL LEVERING'),'VIDERE TIL LEVERING')]/*")
@@ -553,7 +594,7 @@ class PaymentProviderFetcher():
             btn = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]")
             x_path = "//*[starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]"
-        
+
         return btn, x_path
 
     def goto_cart(self, website: str):
@@ -568,14 +609,15 @@ class PaymentProviderFetcher():
 
                 if h.startswith("/"):
                     h = f"{website}{h}"
-                    
+
                 hrefs.append(h.lower())
             except:
                 ...
 
         hrefs = list(set(hrefs))
 
-        hrefs = list(filter(lambda x: x.find("/cart") != -1 or x.find("/kurv") != -1 or x.find("/basket") != -1, hrefs))
+        hrefs = list(filter(lambda x: x.find("cart") != -
+                     1 or x.find("kurv") != -1 or x.find("basket") != -1, hrefs))
 
         sleep(1.2)
 
@@ -613,7 +655,7 @@ class PaymentProviderFetcher():
                 self.driver.get(f"{website}/checkout")
                 sleep(1.2)
                 return True
-        
+
         return False
 
     def accept_terms(self):
@@ -655,6 +697,9 @@ class PaymentProviderFetcher():
                 break
 
         if payment_gateway:
+            if payment_gateway == "payments.nets":
+                payment_gateway = "nets"
+
             self.save_to_output(website, payment_gateway)
             return True
 
@@ -688,16 +733,17 @@ class PaymentProviderFetcher():
 
     @staticmethod
     def clean_url(url: str) -> str:
-        url = url.replace("www.", "").replace("ww.", "").replace("https://", "").replace("http://", "")
+        url = url.replace("www.", "").replace("ww.", "").replace(
+            "https://", "").replace("http://", "")
 
         if url.endswith("/"):
             url = url.removesuffix("/")
-        
+
         return url
-    
+
     def start_main_process(self):
         websites = list(map(model.clean_url, model.WEBSITES))
-        
+
         for website in websites:
             website = f'https://{website.replace("www.", "")}'
             print(f"Current Website: {website}")
@@ -736,56 +782,8 @@ class PaymentProviderFetcher():
 if __name__ == "__main__":
     model = PaymentProviderFetcher()
     model.main()
-    
-    # websites = list(map(model.clean_url, model.WEBSITES))
-    # print(websites)
 
-    # urls = ["/catalog/cart.php",
-    #         "https://www.sortesokker.dk/checkout/cart/",
-    #         "https://enamelcopenhagen.dk/cart",
-    #         "/cart"]
-
-    # urls.sort(key=model.custom_sort, reverse=True)
-
-    # print(urls)
-
-    # model.init_webdriver()
-    # model.driver.get("https://nordbrands.dk/cart")
-    # sleep(30)
-    # print("Clicking")
-    # model.accept_terms()
-    # print("Done")
-    # sleep(4000)
-
-    # sleep(1.3)
-    # # model.get_checkout_btn("https://www.skatepro.dk/catalog/cart.php")
-    # # model.get_checkout_btn("https://www.sortesokker.dk/checkout/cart/")
-    # model.get_checkout_btn("https://enamelcopenhagen.dk/cart")
-    # model.get_checkout_btn("https://www.natruba.dk/cart")
-
-    # urls = re.sub('<[^<]+>', "", "<loc>https://danishendurance.com/products/compression-socks</loc> <lastmod>2023-03-14T12:03:13+01:00</lastmod> <changefreq>daily</changefreq> <image:image> <image:loc>https://cdn.shopify.com/s/files/1/0357/2999/7883/products/compression-socks-396890.jpg?v=1664873853</image:loc> <image:title>COMPRESSION SOCKS</image:title> <url> <loc>https://danishendurance.com/products/organic-cotton-compression-socks</loc> <lastmod>2023-03-14T14:44:21+01:00</lastmod>")
-    # urls = re.findall("(?P<url>https?://[^\s]+)", urls)
-    # print(urls)
-    # model.execute_click_xpath("//*[normalize-space(),'Tilføj til kurv']", "https://danishendurance.com/products/compression-socks")
-
-    # l = ["https://www.skatepro.dk/catalog/cart.php",
-    #      "https://www.sortesokker.dk/checkout/cart/",
-    #      "https://enamelcopenhagen.dk/cart",
-    #      "https://www.natruba.dk/cart"]
-    # l.sort(key=len, reverse=True)
-    # print(l)
-
-    # x_path = "//*[translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV']/*"
-
-    # if x_path.endswith("/*"):
-    #     x_path = "/*".join(x_path.split("/*")[:2])
-
-    # print(x_path)
-
-    # url = 'https://www.skatepro.dk/c77.htm'
-    # website = 'https://skatepro.dk'
-    # print(url.find(website))
-
+# -----------------
 # givingdeer.dk
 # fitnesscoaching.dk
 # danishendurance.com
@@ -803,3 +801,20 @@ if __name__ == "__main__":
 # skatepro.dk
 # liberte.dk
 # vinylpladen.dk
+# -----------------
+# xl-byg.dk
+# matas.dk
+# apopro.dk
+# coolshop.dk
+# silvan.dk
+# sostrenegrene.com
+# bygma.dk
+# power.dk
+# elgiganten.dk
+# nicehair.dk
+# beautycos.dk
+# kop-kande.dk
+# imerco.dk
+# maxizoo.dk
+# nemlig.com
+# -----------------
