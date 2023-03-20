@@ -1,3 +1,6 @@
 https://xl-byg.dk	:	nets
 https://coolshop.dk	:	reepay
-
+https://nicehair.dk	:	bambora
+https://beautycos.dk	:	bambora
+https://kop-kande.dk	:	onpay
+https://imerco.dk	:	nets

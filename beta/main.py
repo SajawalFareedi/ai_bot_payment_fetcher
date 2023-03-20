@@ -16,7 +16,7 @@ class PaymentProviderFetcher():
     def __init__(self):
         # open("payment_gateways.txt", encoding="utf8").read().strip().lower().split('\n')
         self.PAYMENT_GATEWAYS = ["Shipmondo Payments", "Shopify Payments", "Pensopay", "Clearhaus", "Quickpay", "Bambora", "Worldline",
-                                 "Reepay", "Valitor", "Freepay", "Adyen", "Farpay", "Lunar", "payments.nets", "Stripe", "Onpay", "Elevon", "Swiipe", "Paylike", "Nets"]
+                                 "Reepay", "Valitor", "Freepay", "Adyen", "Farpay", "Lunar", "payment-provider-nets", "payments.nets", "Stripe", "Onpay", "Elevon", "Swiipe", "Paylike", "Nets"]
         self.WEBSITES = open("urls.txt", encoding="utf8").read(
         ).strip().lower().replace("\r", "").split("\n")
         self.OUTPUT_FILE = open(f"output_{time()}.txt", "w+", encoding="utf8")
@@ -151,110 +151,110 @@ class PaymentProviderFetcher():
         add_to_cart, x_path, text = None, None, ""
 
         add_to_cart = self.get_element_by_xpath(
-            "//*[starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]/*")
-        x_path = "//*[starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]/*"
+            "//*[self::button][starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]/*")
+        x_path = "//*[self::button][starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]/*"
         text = "tilføj til kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]"
+                "//*[self::button][starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'tilføj til kurv', 'TILFØJ TIL KURV'),'TILFØJ TIL KURV')]"
             text = "tilføj til kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*")
-            x_path = "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*"
+                "//*[self::button][translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*")
+            x_path = "//*[self::button][translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']/*"
             text = "læg i kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']")
-            x_path = "//*[translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']"
+                "//*[self::button][translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']")
+            x_path = "//*[self::button][translate(normalize-space(), 'læg i kurv', 'LÆG I KURV')='LÆG I KURV']"
             text = "læg i kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]/*"
+                "//*[self::button][starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]/*")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]/*"
             text = "læg i kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]"
+                "//*[self::button][starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'læg i kurv', 'LÆG I KURV'),'LÆG I KURV')]"
             text = "læg i kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]/*"
+                "//*[self::button][starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]/*")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]/*"
             text = "add to cart"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]"
+                "//*[self::button][starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'add to cart', 'ADD TO CART'),'ADD TO CART')]"
             text = "add to cart"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]/*"
+                "//*[self::button][starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]/*")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]/*"
             text = "add to basket"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]"
+                "//*[self::button][starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'add to basket', 'ADD TO BASKET'),'ADD TO BASKET')]"
             text = "add to basket"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]/*"
+                "//*[self::button][starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]/*")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]/*"
             text = "tilføj til indkøbskurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]"
+                "//*[self::button][starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'tilføj til indkøbskurv', 'TILFØJ TIL INDKØBSKURV'),'TILFØJ TIL INDKØBSKURV')]"
             text = "tilføj til indkøbskurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]/*"
+                "//*[self::button][starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]/*")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]/*"
             text = "føj til kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]"
+                "//*[self::button][starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'føj til kurv', 'FØJ TIL KURV'),'FØJ TIL KURV')]"
             text = "føj til kurv"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]/*")
-            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]/*"
+                "//*[self::button][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]/*")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]/*"
             text = "køb"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]")
-            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]"
+                "//*[self::button][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'køb', 'KØB'),'KØB')]"
             text = "køb"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]/*")
-            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]/*"
+                "//*[self::button][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]/*")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]/*"
             text = "levering"
 
         if not add_to_cart:
             add_to_cart = self.get_element_by_xpath(
-                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]")
-            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]"
+                "//*[self::button][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]")
+            x_path = "//*[self::button][starts-with(translate(normalize-space(), 'levering', 'LEVERING'),'LEVERING')]"
             text = "levering"
 
         return add_to_cart, x_path, text
@@ -408,7 +408,7 @@ class PaymentProviderFetcher():
 
             sleep(1.2)
 
-        self.driver.get(website)
+        self.driver.get(f"{website}{lang}") if lang else self.driver.get(website)
         sleep(1.2)
         self.find_product_on_main_page(website)
 
@@ -584,16 +584,6 @@ class PaymentProviderFetcher():
 
         if not btn:
             btn = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]/*"
-
-        if not btn:
-            btn = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]"
-
-        if not btn:
-            btn = self.get_element_by_xpath(
                 "//*[starts-with(translate(normalize-space(), 'fortsæt til kassen', 'FORTSÆT TIL KASSEN'),'FORTSÆT TIL KASSEN')]/*")
             x_path = "//*[starts-with(translate(normalize-space(), 'fortsæt til kassen', 'FORTSÆT TIL KASSEN'),'FORTSÆT TIL KASSEN')]/*"
 
@@ -604,13 +594,13 @@ class PaymentProviderFetcher():
 
         if not btn:
             btn = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'videre til levering', 'VIDERE TIL LEVERING'),'VIDERE TIL LEVERING')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'videre til levering', 'VIDERE TIL LEVERING'),'VIDERE TIL LEVERING')]/*"
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'videre til levering', 'VIDERE TIL LEVERING'),'VIDERE TIL LEVERING')]/*")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'videre til levering', 'VIDERE TIL LEVERING'),'VIDERE TIL LEVERING')]/*"
 
         if not btn:
             btn = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'videre til levering', 'VIDERE TIL LEVERING'),'VIDERE TIL LEVERING')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'videre til levering', 'VIDERE TIL LEVERING'),'VIDERE TIL LEVERING')]"
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'videre til levering', 'VIDERE TIL LEVERING'),'VIDERE TIL LEVERING')]")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'videre til levering', 'VIDERE TIL LEVERING'),'VIDERE TIL LEVERING')]"
 
         if not btn:
             btn = self.get_element_by_xpath(".//*[@name='checkout']")
@@ -618,13 +608,23 @@ class PaymentProviderFetcher():
 
         if not btn:
             btn = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]/*")
-            x_path = "//*[starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]/*"
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]/*")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]/*"
 
         if not btn:
             btn = self.get_element_by_xpath(
-                "//*[starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]")
-            x_path = "//*[starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]"
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'bestil', 'BESTIL'),'BESTIL')]"
+        
+        if not btn:
+            btn = self.get_element_by_xpath(
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]/*")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]/*"
+
+        if not btn:
+            btn = self.get_element_by_xpath(
+                "//*[self::button or self::a][starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]")
+            x_path = "//*[self::button or self::a][starts-with(translate(normalize-space(), 'gå til', 'GÅ TIL'),'GÅ TIL')]"
 
         return btn, x_path
 
@@ -796,7 +796,7 @@ class PaymentProviderFetcher():
                     self.do_checkout(website)
 
             print(f"Finished: {website}")
-            sleep(4000.5)
+            sleep(4.5)
 
         print("All finished!")
 
