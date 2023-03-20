@@ -261,7 +261,7 @@ class PaymentProviderFetcher():
 
     def custom_sort(self, url: str) -> bool:
         return url.startswith("/")
-    
+
     def check_products(self, website: str, urls: list) -> bool:
         for url in urls:
             url = url.replace("www.", "")
@@ -297,7 +297,7 @@ class PaymentProviderFetcher():
                         return True
 
             sleep(randrange(2, 4))
-        
+
         return False
 
     def find_product_on_main_page(self, website: str):
@@ -313,42 +313,72 @@ class PaymentProviderFetcher():
 
         urls = list(set(urls))
         urls.sort(key=self.custom_sort, reverse=True)
-        
-        _urls = list(filter(lambda x: x.find("product") != -1 or x.find("produkt") != -1, urls))
+
+        _urls = list(filter(lambda x: x.find("product")
+                     != -1 or x.find("produkt") != -1, urls))
         _urls.sort(key=self.custom_sort, reverse=True)
-        
+
         if len(_urls) > 0:
             s = self.check_products(website, _urls)
             if not s:
                 self.check_products(website, urls)
         else:
             self.check_products(website, urls)
-        
 
     def check_btn_clickable(self, xpath: str) -> bool:
         return self.driver.find_element(By.XPATH, xpath).is_enabled()
 
     def handle_sitemap(self, website: str):
+        # self.driver.get(
+        #     "https://www.silvan.dk/einhell-robotplaeneklipper-900-m?id=7270-2144055")
+        # return
+
+        # self.driver.get(website)
+        # sleep(1.2)
+        # self.find_product_on_main_page(website)
+        # return
+
         page_src = self.driver.page_source.lower()
         page_src = page_src.replace("&gt;", ">").replace("&lt;", "<")
-        
+
         urls = re.sub('<[^<]+>', " ", page_src)
         urls = re.findall("(?P<url>https?://[^\s]+)", urls)
         urls = list(set(urls))
-        
+
         _urls = []
+        url_tries = 1
+        lang = None
 
         for url in urls:
-            url = url.replace("www.", "")
+            url = url.replace("www.", "").lower()
             if url.find(website) != -1:
-                if url.lower().find(".jpg") != -1 or url.lower().find(".png") != -1 or url.lower().find(".jpeg") != -1 or url.lower().find(".svg") != -1:
+                if url.find(".jpg") != -1 or url.find(".png") != -1 or url.find(".jpeg") != -1 or url.find(".svg") != -1:
                     continue
 
-                if url.lower().find("product") != -1 or url.find("produkt") != -1 or url.find("shop") != -1 or url.lower().find("sitemap") != -1:
+                if url.find("product") != -1 or url.find("produkt") != -1 or url.find("shop") != -1 or url.find("sitemap") != -1:
                     _urls.append(url)
+                    
+                    if url.find("sitemap") != -1:
+                        if url.find("/da") != -1:
+                            lang = "/da"  
 
         for url in _urls:
-            if url.lower().find("product") != -1 or url.find("produkt") != -1 or url.find("shop") != -1:
+            url = url.lower()
+
+            if url.find("sitemap") != -1:
+                if lang:
+                    if url.find(lang) != -1:
+                        self.driver.get(url)
+                        sleep(1.2)
+                        self.handle_sitemap(website)
+                        return
+                else:
+                    self.driver.get(url)
+                    sleep(1.2)
+                    self.handle_sitemap(website)
+                    return
+
+            if url.find("product") != -1 or url.find("produkt") != -1 or url.find("shop") != -1:
                 self.driver.get(url)
                 sleep(1.2)
                 is_valid_page, xpath, text = self.get_cart_btn()
@@ -370,11 +400,12 @@ class PaymentProviderFetcher():
                     if is_valid_page:
                         if self.check_btn_clickable(xpath):
                             return
-            elif url.lower().find("sitemap") != -1:
-                self.driver.get(url)
-                sleep(1.2)
-                self.handle_sitemap(website)
-                return
+
+                url_tries += 1
+
+            if url_tries >= 10:
+                break
+
             sleep(1.2)
 
         self.driver.get(website)
@@ -651,12 +682,10 @@ class PaymentProviderFetcher():
             sleep(1.2)
             if self.get_checkout_btn():
                 return True
-            else:
-                self.driver.get(f"{website}/checkout")
-                sleep(1.2)
-                return True
 
-        return False
+        self.driver.get(f"{website}/checkout")
+        sleep(1.2)
+        return True
 
     def accept_terms(self):
         xpaths = [
